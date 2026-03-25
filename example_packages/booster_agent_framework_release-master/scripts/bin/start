@@ -1,0 +1,102 @@
+#!/usr/bin/env bash
+set -eo pipefail
+IFS=$'\n\t'
+
+# define related paths
+SCRIPT_PATH="$(realpath "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+IMAGE_LOAD_PATH="$(cd "$(dirname "${SCRIPT_DIR}")" && pwd)"
+AGENT_JSON_PATH="${IMAGE_LOAD_PATH}/agent.json"
+
+# Read ros2 launch configuration from agent.json
+AGENT_NAME=$(jq -r '.name' "$AGENT_JSON_PATH")    # agent name is guaranteed to exist by build script
+
+LOG_DIR="/var/log/booster_agent/${AGENT_NAME}"
+ENV_DIR="/tmp/booster_agent/${AGENT_NAME}"
+mkdir -p "$LOG_DIR"
+mkdir -p "$ENV_DIR"
+LOG_FILE="${LOG_DIR}/apprun_start.log"
+ENV_FILE="${ENV_DIR}/agent_env"
+
+# —— add timestamp and header to log file
+echo "===============================" >> "$LOG_FILE"
+echo "    $(date '+%Y-%m-%d %H:%M:%S')" >> "$LOG_FILE"
+echo "===============================" >> "$LOG_FILE"
+echo "SCRIPT_PATH: $SCRIPT_PATH" >> "$LOG_FILE"
+echo "IMAGE_LOAD_PATH: $IMAGE_LOAD_PATH" >> "$LOG_FILE"
+echo "AGENT_JSON_PATH: $AGENT_JSON_PATH" >> "$LOG_FILE"
+
+# define a logging function
+log() {
+  printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$1" >> "$LOG_FILE"
+}
+
+# ERR trap：打印行号、命令、cwd，并杀掉后台 ROS
+error_handler() {
+  local lineno="$1"
+  log "❌ ERROR in ${SCRIPT_PATH} at line ${lineno}: \`${BASH_COMMAND}\` (cwd: $(pwd))"
+  [[ -n "${LAUNCH_PID:-}" ]] && kill "$LAUNCH_PID" 2>/dev/null || true
+  exit 1
+}
+trap 'error_handler ${LINENO}' ERR
+
+
+ROS2_PACKAGE=$(jq -r '.ros2.package_name' "$AGENT_JSON_PATH")
+ROS2_LAUNCH=$(jq -r '.ros2.launch_file' "$AGENT_JSON_PATH")
+if [ -z "$ROS2_PACKAGE" ] || [ "$ROS2_PACKAGE" = "null" ]; then
+    log "ERROR: agent.json missing or invalid ros2.package_name"
+    exit 1
+fi
+if [ -z "$ROS2_LAUNCH" ] || [ "$ROS2_LAUNCH" = "null" ]; then
+    log "ERROR: agent.json missing or invalid ros2.launch_file"
+    exit 1
+fi
+
+log "▶ script start (cwd: $(pwd))"
+
+# 切到 AppRun 根目录
+cd "${IMAGE_LOAD_PATH}" 
+log "✔ cd to $(pwd)"
+
+export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity}] {message}"
+export RCUTILS_COLORIZED_OUTPUT=1
+log "✔ RCUTILS env set"
+
+# 确保 setup.bash 存在
+if [[ ! -f agent/setup.bash ]]; then
+  log "❌ missing agent/setup.bash"
+  exit 1
+fi
+
+# 暂时放宽 -e 和 pipefail，让我们手动检查返回值
+set +e +o pipefail
+# source setup.bash
+log "▶ sourcing agent/setup.bash"
+source agent/setup.bash  >>"$LOG_FILE" 2>&1
+
+# extra source for ros2 specific envs
+export FASTRTPS_DEFAULT_PROFILES_FILE=/opt/booster/BoosterRos2/fastdds_profile.xml
+export ROS_LOG_DIR=/var/log/booster_agent/ros_log
+
+log "Print env after source bashrc"
+printenv >>"$LOG_FILE" 2>&1
+setup_ret=$?
+# 恢复严格模式
+set -eo pipefail
+
+if (( setup_ret != 0 )); then
+  log "❌ setup.bash exited with ${setup_ret}"
+  exit $setup_ret
+else
+  log "✔ sourced setup.bash"
+fi
+
+# create env dir
+mkdir -p "$ENV_DIR"
+
+# 后台启动 ROS2
+log "▶ launching ros2 launch default_agent"
+( ros2 launch "$ROS2_PACKAGE" "$ROS2_LAUNCH" >>"$LOG_FILE" 2>&1 ) &
+LAUNCH_PID=$!
+echo "LAUNCH_PID=${LAUNCH_PID}" > "$ENV_FILE"
+log "✔ background pid=${LAUNCH_PID}"

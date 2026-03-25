@@ -1,0 +1,14 @@
+{
+    "id": "com.boosterobotics.example",
+    "name": "Example",
+    "version": "1.0.0",
+    "description": "Example Agent officially provided by Booster Robotics",
+    "gait": "default",
+    "app_image" : {
+        "icon" : "/res/logo.png"
+    },
+    "ros2" : {
+        "package_name" : "example_agent",
+        "launch_file" : "launch.py"
+    }
+}

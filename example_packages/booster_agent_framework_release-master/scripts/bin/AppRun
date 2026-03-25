@@ -1,0 +1,164 @@
+#!/bin/env python3
+import os
+import struct
+import json
+import glob
+import signal
+import subprocess
+import logging
+import argparse
+import base64
+
+class BoosterAgent:
+    def __init__(self, fd=3):
+        self._fd = fd
+        self._dir = os.path.dirname(os.path.abspath(__file__))
+        self._config = None
+        self._icons = None
+
+    @property
+    def config(self):
+        # 读取 agent.json 文件
+        if self._config is None:
+            try:
+                with open(os.path.join(self._dir, 'agent.json'), 'r', encoding='utf8') as f:
+                    self._config = json.load(f)
+            except:
+                self._config = {}
+        return self._config
+    
+    @property
+    def icons(self):
+        if self._icons is None:
+            self._icons = []
+            for filepath in glob.glob(f"{self._dir}/resources/icons/*.png"):
+                filename = os.path.basename(filepath)
+                id = os.path.splitext(filename)[0]
+                content = base64.b64encode(open(filepath, 'rb').read()).decode('utf8')
+                self._icons.append({
+                    'id': id,
+                    'mime': 'image/png',
+                    'content': content,
+                    'filepath': filepath,
+                })
+        return self._icons
+
+    def run(self):
+        self._running = True
+        while self._running:
+            req = self._read_json_object()
+            # 可能是 AgentManager 异常关闭，这种情况，AppRun 需要退出去了
+            # 调用 stop 并且不需要给 AgentManager 响应
+            if req == False:
+                logging.warning("AgentManager had exit")
+                self._stop()
+                break
+
+            res = {
+                "success": True,
+                "result": {},
+            }
+            request = req["request"]
+            if request == "start":
+                logging.info("received start command")
+                ok = self._start()
+                res["success"] = ok
+
+            elif request == "stop":
+                logging.info("received stop command")
+                self._running = False
+                ok = self._stop()
+                res["success"] = ok
+
+            self._write_json_object(res)
+
+    def _exec(self, cmd) -> bool:
+        try:
+            result = subprocess.run([cmd], timeout=300)   # 给 ros2 足够时间
+            ok = (result.returncode == 0)
+            if ok:
+                logging.info(f"exec succeed cmd=\"{cmd}\"")
+            else:
+                logging.error(f"exec failed  cmd=\"{cmd}\" return_code={result.returncode}")
+            return ok
+        except Exception as e:
+            logging.error(f"exec exception cmd=\"{cmd}\" exception={e}")
+            return False
+
+    def _start(self) -> bool:
+        cmd = os.path.join(self._dir, "bin", "start")
+        return self._exec(cmd)
+
+    def _stop(self) -> bool:
+        cmd = os.path.join(self._dir, "bin", "stop")
+        return self._exec(cmd)
+
+    def _read_json_object(self):
+        buf = os.read(self._fd, 4)  # 先读取四字节的长度
+        if len(buf) != 4:
+            return False
+        size = struct.unpack("<i", buf)[0]
+        packet = os.read(self._fd, size)
+        if len(packet) != size:
+            return False
+
+        try:
+            return json.loads(packet.decode("utf8"))
+        except:
+            return False
+
+    def _write_json_object(self, obj):
+        buf = json.dumps(obj).encode("utf8")
+        os.write(self._fd, struct.pack("<i", len(buf)))
+        os.write(self._fd, buf)
+
+
+def main():
+    # 屏蔽掉 SIG_IGN
+    signal.signal(signal.SIGINT, signal.SIG_IGN)
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--log-dir", help="directory for logging")
+    parser.add_argument("--debug", action="store_true", help="debug mode")
+    parser.add_argument("--print-config", action="store_true", help="print config and exit")
+    parser.add_argument("--print-icons", action="store_true", help="print icons and exit")
+    args = parser.parse_args()
+
+    agent = BoosterAgent()
+
+    # 打印 config 就退出
+    output = {}
+    if args.print_config:
+        output['config'] = agent.config
+    if args.print_icons:
+        output['icons'] = agent.icons
+    if len(output) > 0:
+        print(json.dumps(output, indent=2))
+        return
+
+    # 创建日志目录并初始化日志
+    agent_name = agent.config.get('name', 'unnamed')
+    log_dir = args.log_dir
+    if not log_dir:
+        print("please specified --log-dir")
+        return
+    os.makedirs(log_dir, exist_ok=True)
+    logging.basicConfig(
+        filename=os.path.join(log_dir, f'{agent_name}-AppRun.log'),
+        level=logging.INFO,
+        format='%(asctime)s [%(levelname)s] %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S',
+    )
+
+    logging.info("agent started")
+
+    if args.debug:
+        logging.debug("Debug mode enabled, running start and stop commands")
+        agent._start()
+        agent._stop()
+    else:
+        agent.run()
+
+
+if __name__ == "__main__":
+    main()

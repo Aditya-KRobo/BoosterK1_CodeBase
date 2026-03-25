@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>booster_agent_framework_node</name>
+  <version>0.1.0</version>
+  <description>Node for booster agent framework.</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>booster_agent_framework_protocol</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
