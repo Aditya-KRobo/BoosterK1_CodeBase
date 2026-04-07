@@ -180,18 +180,15 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-```
-
----
 
 ### How to set it up
 
-**1. Create your reference image folder** alongside `demo.py`:
-```
-your_project/
-├── demo.py
-└── reference_cards/
-    ├── apple.jpg
-    ├── cup.png
-    ├── book.jpg
-    └── ...
+# **1. Create your reference image folder** alongside `demo.py`:
+# ```
+# your_project/
+# ├── demo.py
+# └── reference_cards/
+#     ├── apple.jpg
+#     ├── cup.png
+#     ├── book.jpg
+#     └── ...
