@@ -109,6 +109,46 @@ class ImageSubscriber(Node):
       engine.say("I don't see much " + req_color + " color.")
     engine.runAndWait()
 
+  def detect_card_region(self):
+    """
+    Uses the solid single-colour card background to isolate
+    the card from the real-world scene via contour detection.
+    Returns the cropped card image, or None if not found.
+    """
+    # Convert to HSV for robust colour segmentation
+    hsv = self.hsv_image.copy()
+
+    # --- Tune these bounds to your card's background colour ---
+    # Example below targets a white card background
+    card_bg_lower = np.array([0,   0,   180])
+    card_bg_upper = np.array([180, 40,  255])
+
+    mask = cv2.inRange(hsv, card_bg_lower, card_bg_upper)
+
+    # Clean up the mask
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (15, 15))
+    mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN,  kernel)
+
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    if not contours:
+        return None
+
+    # Largest contour is assumed to be the card
+    largest = max(contours, key=cv2.contourArea)
+
+    # Filter out tiny blobs — card should occupy a meaningful area
+    frame_area = self.bgr_image.shape[0] * self.bgr_image.shape[1]
+    if cv2.contourArea(largest) < frame_area * 0.05:
+        return None
+
+    # Bounding box crop of the card
+    x, y, w, h = cv2.boundingRect(largest)
+    card_crop = self.bgr_image[y:y+h, x:x+w]
+
+    return card_crop
+
   def picture_hunter(self):
     """
     Compares the current bgr_image against pre-loaded reference card images
@@ -122,6 +162,14 @@ class ImageSubscriber(Node):
       - good_match_ratio:  fraction of matches that must pass the distance filter
       - min_good_matches:  absolute floor — avoids false positives on near-blank frames
     """
+
+    card_crop = self.detect_card_region()
+    if card_crop is None:
+        msg = "I cannot see a card in front of me."
+        print(msg)
+        self._speak(msg)
+        return msg
+
     GOOD_MATCH_DISTANCE = 50   # Lower = stricter; ORB Hamming distance threshold
     MIN_GOOD_MATCHES    = 15   # Minimum matches required to trust a result
 
@@ -130,7 +178,7 @@ class ImageSubscriber(Node):
       return
 
     # Convert current frame to grayscale for ORB
-    frame_gray = cv2.cvtColor(self.bgr_image, cv2.COLOR_BGR2GRAY)
+    frame_gray = cv2.cvtColor(card_crop, cv2.COLOR_BGR2GRAY)
     kp_frame, des_frame = self.orb.detectAndCompute(frame_gray, None)
 
     if des_frame is None or len(des_frame) == 0:
@@ -180,6 +228,7 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
 ### How to set it up
 
