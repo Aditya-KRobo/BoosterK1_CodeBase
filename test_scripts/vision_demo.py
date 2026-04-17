@@ -170,8 +170,8 @@ class ImageSubscriber(Node):
         self._speak(msg)
         return msg
 
-    GOOD_MATCH_DISTANCE = 50   # Lower = stricter; ORB Hamming distance threshold
-    MIN_GOOD_MATCHES    = 15   # Minimum matches required to trust a result
+    GOOD_MATCH_DISTANCE = 65   # Lower = stricter; ORB Hamming distance threshold
+    MIN_GOOD_MATCHES    = 20   # Minimum matches required to trust a result
 
     if not self.reference_data:
       print("No reference images loaded. Add images to 'reference_cards/' folder.")
@@ -219,9 +219,10 @@ def main(args=None):
         print("KeyboardInterrupt received, stopping vision_demo...")
     finally:
         try:
-            image_subscriber.color_hunter('green')
+            # image_subscriber.color_hunter('green')
+            image_subscriber.picture_hunter()
         except Exception as e:
-            print(f"color_hunter skipped: {e}")
+            print(f"picture_hunter skipped: {e}")
         image_subscriber.destroy_node()
         rclpy.shutdown()
         print("vision_demo shutdown complete.")
