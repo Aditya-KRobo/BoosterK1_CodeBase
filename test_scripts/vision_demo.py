@@ -163,22 +163,22 @@ class ImageSubscriber(Node):
       - min_good_matches:  absolute floor — avoids false positives on near-blank frames
     """
 
-    card_crop = self.detect_card_region()
-    if card_crop is None:
-        msg = "I cannot see a card in front of me."
-        print(msg)
-        self._speak(msg)
-        return msg
+    # card_crop = self.detect_card_region()
+    # if card_crop is None:
+    #     msg = "I cannot see a card in front of me."
+    #     print(msg)
+    #     self._speak(msg)
+    #     return msg
 
-    GOOD_MATCH_DISTANCE = 65   # Lower = stricter; ORB Hamming distance threshold
-    MIN_GOOD_MATCHES    = 20   # Minimum matches required to trust a result
+    GOOD_MATCH_DISTANCE = 70   # Lower = stricter; ORB Hamming distance threshold
+    MIN_GOOD_MATCHES    = 40   # Minimum matches required to trust a result
 
     if not self.reference_data:
       print("No reference images loaded. Add images to 'reference_cards/' folder.")
       return
 
     # Convert current frame to grayscale for ORB
-    frame_gray = cv2.cvtColor(card_crop, cv2.COLOR_BGR2GRAY)
+    frame_gray = cv2.cvtColor(self.hsv_image, cv2.COLOR_BGR2GRAY)
     kp_frame, des_frame = self.orb.detectAndCompute(frame_gray, None)
 
     if des_frame is None or len(des_frame) == 0:
