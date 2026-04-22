@@ -1,0 +1,1036 @@
+[0.000000] (-) TimerEvent: {}
+[0.000516] (-) JobUnselected: {'identifier': 'booster_interface'}
+[0.000929] (-) JobUnselected: {'identifier': 'booster_msgs'}
+[0.001309] (-) JobUnselected: {'identifier': 'virtual_gamepad'}
+[0.001683] (vision_interface) JobQueued: {'identifier': 'vision_interface', 'dependencies': OrderedDict()}
+[0.001739] (vision_interface) JobStarted: {'identifier': 'vision_interface'}
+[0.016409] (vision_interface) JobProgress: {'identifier': 'vision_interface', 'progress': 'cmake'}
+[0.017486] (vision_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/interface/vision_interface', '-DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface'], 'cwd': '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'booster'), ('SSH_CLIENT', '10.12.100.187 33470 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('BROWSER', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/booster'), ('OLDPWD', '/home/booster/Workspace/BoosterK1_CodeBase'), ('TERM_PROGRAM_VERSION', '1.111.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-920dc37c-99ab-4822-b059-69acf6f80816.sock'), ('JETSON_L4T', '36.4.3'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin NX Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'booster'), ('JETSON_MODULE', 'NVIDIA Jetson Orin NX (8GB ram)'), ('JETSON_SERIAL_NUMBER', '1421625075226'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/opt/booster/BoosterRos2/fastdds_profile.xml'), ('CUDA_ROOT', '/usr/local/cuda'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-897659084f.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CUBA_HOME', '/usr/local/cuda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface'), ('LC_ALL', 'en_AU.utf8'), ('SSH_CONNECTION', '10.12.100.187 33470 10.12.100.21 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.2'), ('JETSON_P_NUMBER', 'p3767-0001'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099478] (-) TimerEvent: {}
+[0.128131] (vision_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199636] (-) TimerEvent: {}
+[0.214345] (vision_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.227967] (vision_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.300435] (-) TimerEvent: {}
+[0.356789] (vision_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.366545] (vision_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.367090] (vision_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.367836] (vision_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.374662] (vision_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400617] (-) TimerEvent: {}
+[0.501219] (-) TimerEvent: {}
+[0.525788] (vision_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.537539] (vision_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.537957] (vision_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.538805] (vision_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.548578] (vision_interface) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.601335] (-) TimerEvent: {}
+[0.701816] (-) TimerEvent: {}
+[0.802307] (-) TimerEvent: {}
+[0.840413] (vision_interface) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.902454] (-) TimerEvent: {}
+[1.003497] (-) TimerEvent: {}
+[1.014814] (vision_interface) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.092554] (vision_interface) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.100461] (vision_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.103642] (-) TimerEvent: {}
+[1.115373] (vision_interface) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.137527] (vision_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.164436] (vision_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.203758] (-) TimerEvent: {}
+[1.250934] (vision_interface) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.255953] (vision_interface) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.303908] (-) TimerEvent: {}
+[1.404540] (-) TimerEvent: {}
+[1.405003] (vision_interface) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.457383] (vision_interface) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.504691] (-) TimerEvent: {}
+[1.534678] (vision_interface) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.552960] (vision_interface) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.604834] (-) TimerEvent: {}
+[1.677912] (vision_interface) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.678291] (vision_interface) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.704987] (-) TimerEvent: {}
+[1.800897] (vision_interface) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.802583] (vision_interface) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.805062] (-) TimerEvent: {}
+[1.905508] (-) TimerEvent: {}
+[1.905911] (vision_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.923511] (vision_interface) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[1.948679] (vision_interface) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.005625] (-) TimerEvent: {}
+[2.106083] (-) TimerEvent: {}
+[2.206613] (-) TimerEvent: {}
+[2.307589] (-) TimerEvent: {}
+[2.408077] (-) TimerEvent: {}
+[2.508559] (-) TimerEvent: {}
+[2.609202] (-) TimerEvent: {}
+[2.613716] (vision_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.709400] (-) TimerEvent: {}
+[2.810043] (-) TimerEvent: {}
+[2.911037] (-) TimerEvent: {}
+[3.011545] (-) TimerEvent: {}
+[3.112142] (-) TimerEvent: {}
+[3.212624] (-) TimerEvent: {}
+[3.313201] (-) TimerEvent: {}
+[3.413763] (-) TimerEvent: {}
+[3.454442] (vision_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.513865] (-) TimerEvent: {}
+[3.614354] (-) TimerEvent: {}
+[3.714851] (-) TimerEvent: {}
+[3.781089] (vision_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.814985] (-) TimerEvent: {}
+[3.828950] (vision_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.831724] (vision_interface) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.883061] (vision_interface) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.883448] (vision_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.883590] (vision_interface) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.883708] (vision_interface) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[3.915114] (-) TimerEvent: {}
+[3.924881] (vision_interface) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[4.015237] (-) TimerEvent: {}
+[4.115688] (-) TimerEvent: {}
+[4.216142] (-) TimerEvent: {}
+[4.314883] (vision_interface) StdoutLine: {'line': b'-- Using numpy include directory: /home/booster/.local/lib/python3.10/site-packages/numpy/core/include\n'}
+[4.316223] (-) TimerEvent: {}
+[4.334025] (vision_interface) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.372276] (vision_interface) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.375511] (vision_interface) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.382503] (vision_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.416392] (-) TimerEvent: {}
+[4.487663] (vision_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[4.513463] (vision_interface) StdoutLine: {'line': b'-- Build files have been written to: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface\n'}
+[4.516491] (-) TimerEvent: {}
+[4.538812] (vision_interface) CommandEnded: {'returncode': 0}
+[4.540076] (vision_interface) JobProgress: {'identifier': 'vision_interface', 'progress': 'build'}
+[4.542128] (vision_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface', '--', '-j4', '-l4'], 'cwd': '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'booster'), ('SSH_CLIENT', '10.12.100.187 33470 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('BROWSER', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/booster'), ('OLDPWD', '/home/booster/Workspace/BoosterK1_CodeBase'), ('TERM_PROGRAM_VERSION', '1.111.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-920dc37c-99ab-4822-b059-69acf6f80816.sock'), ('JETSON_L4T', '36.4.3'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin NX Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'booster'), ('JETSON_MODULE', 'NVIDIA Jetson Orin NX (8GB ram)'), ('JETSON_SERIAL_NUMBER', '1421625075226'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/opt/booster/BoosterRos2/fastdds_profile.xml'), ('CUDA_ROOT', '/usr/local/cuda'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-897659084f.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CUBA_HOME', '/usr/local/cuda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface'), ('LC_ALL', 'en_AU.utf8'), ('SSH_CONNECTION', '10.12.100.187 33470 10.12.100.21 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.2'), ('JETSON_P_NUMBER', 'p3767-0001'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[4.616678] (-) TimerEvent: {}
+[4.634990] (vision_interface) StdoutLine: {'line': b'[  0%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.716800] (-) TimerEvent: {}
+[4.817307] (-) TimerEvent: {}
+[4.918558] (-) TimerEvent: {}
+[5.019061] (-) TimerEvent: {}
+[5.119548] (-) TimerEvent: {}
+[5.220034] (-) TimerEvent: {}
+[5.320591] (-) TimerEvent: {}
+[5.421070] (-) TimerEvent: {}
+[5.521621] (-) TimerEvent: {}
+[5.622079] (-) TimerEvent: {}
+[5.722556] (-) TimerEvent: {}
+[5.823472] (-) TimerEvent: {}
+[5.923984] (-) TimerEvent: {}
+[6.024510] (-) TimerEvent: {}
+[6.125032] (-) TimerEvent: {}
+[6.225613] (-) TimerEvent: {}
+[6.326487] (-) TimerEvent: {}
+[6.427045] (-) TimerEvent: {}
+[6.527578] (-) TimerEvent: {}
+[6.568820] (vision_interface) StdoutLine: {'line': b'[  0%] Built target vision_interface__cpp\n'}
+[6.616167] (vision_interface) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_vision_interface\n'}
+[6.627722] (-) TimerEvent: {}
+[6.634305] (vision_interface) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.727845] (-) TimerEvent: {}
+[6.829167] (-) TimerEvent: {}
+[6.929760] (-) TimerEvent: {}
+[7.030242] (-) TimerEvent: {}
+[7.130722] (-) TimerEvent: {}
+[7.231204] (-) TimerEvent: {}
+[7.331697] (-) TimerEvent: {}
+[7.432292] (-) TimerEvent: {}
+[7.532842] (-) TimerEvent: {}
+[7.633695] (-) TimerEvent: {}
+[7.734150] (-) TimerEvent: {}
+[7.834722] (-) TimerEvent: {}
+[7.935236] (-) TimerEvent: {}
+[8.035785] (-) TimerEvent: {}
+[8.082758] (vision_interface) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/detected_object__type_support.cpp.o\x1b[0m\n'}
+[8.135929] (-) TimerEvent: {}
+[8.236491] (-) TimerEvent: {}
+[8.339180] (-) TimerEvent: {}
+[8.439774] (-) TimerEvent: {}
+[8.540399] (-) TimerEvent: {}
+[8.640977] (-) TimerEvent: {}
+[8.741561] (-) TimerEvent: {}
+[8.842139] (-) TimerEvent: {}
+[8.852219] (vision_interface) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/detections__type_support.cpp.o\x1b[0m\n'}
+[8.942292] (-) TimerEvent: {}
+[9.042822] (-) TimerEvent: {}
+[9.143369] (-) TimerEvent: {}
+[9.243912] (-) TimerEvent: {}
+[9.344489] (-) TimerEvent: {}
+[9.445211] (-) TimerEvent: {}
+[9.545781] (-) TimerEvent: {}
+[9.646796] (-) TimerEvent: {}
+[9.747354] (-) TimerEvent: {}
+[9.827432] (vision_interface) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/line_segments__type_support.cpp.o\x1b[0m\n'}
+[9.847508] (-) TimerEvent: {}
+[9.948025] (-) TimerEvent: {}
+[10.048539] (-) TimerEvent: {}
+[10.149052] (-) TimerEvent: {}
+[10.249588] (-) TimerEvent: {}
+[10.350122] (-) TimerEvent: {}
+[10.450668] (-) TimerEvent: {}
+[10.551185] (-) TimerEvent: {}
+[10.651714] (-) TimerEvent: {}
+[10.684430] (vision_interface) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/cal_param__type_support.cpp.o\x1b[0m\n'}
+[10.751883] (-) TimerEvent: {}
+[10.852455] (-) TimerEvent: {}
+[10.952997] (-) TimerEvent: {}
+[11.053574] (-) TimerEvent: {}
+[11.154362] (-) TimerEvent: {}
+[11.254948] (-) TimerEvent: {}
+[11.332737] (vision_interface) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/detections_track__type_support.cpp.o\x1b[0m\n'}
+[11.355093] (-) TimerEvent: {}
+[11.455602] (-) TimerEvent: {}
+[11.556135] (-) TimerEvent: {}
+[11.656682] (-) TimerEvent: {}
+[11.757554] (-) TimerEvent: {}
+[11.858110] (-) TimerEvent: {}
+[11.958652] (-) TimerEvent: {}
+[12.059178] (-) TimerEvent: {}
+[12.159764] (-) TimerEvent: {}
+[12.260394] (-) TimerEvent: {}
+[12.263352] (vision_interface) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/segmentation_point__type_support.cpp.o\x1b[0m\n'}
+[12.360639] (-) TimerEvent: {}
+[12.461180] (-) TimerEvent: {}
+[12.561721] (-) TimerEvent: {}
+[12.662304] (-) TimerEvent: {}
+[12.762891] (-) TimerEvent: {}
+[12.863515] (-) TimerEvent: {}
+[12.956357] (vision_interface) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/segmentation_line__type_support.cpp.o\x1b[0m\n'}
+[12.963634] (-) TimerEvent: {}
+[13.064139] (-) TimerEvent: {}
+[13.164669] (-) TimerEvent: {}
+[13.265380] (-) TimerEvent: {}
+[13.366360] (-) TimerEvent: {}
+[13.466885] (-) TimerEvent: {}
+[13.567466] (-) TimerEvent: {}
+[13.668023] (-) TimerEvent: {}
+[13.722759] (vision_interface) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/segmentation_result__type_support.cpp.o\x1b[0m\n'}
+[13.768214] (-) TimerEvent: {}
+[13.868983] (-) TimerEvent: {}
+[13.969801] (-) TimerEvent: {}
+[14.070346] (-) TimerEvent: {}
+[14.170892] (-) TimerEvent: {}
+[14.271477] (-) TimerEvent: {}
+[14.372174] (-) TimerEvent: {}
+[14.472740] (-) TimerEvent: {}
+[14.573376] (-) TimerEvent: {}
+[14.627313] (vision_interface) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/image_head_position__type_support.cpp.o\x1b[0m\n'}
+[14.673542] (-) TimerEvent: {}
+[14.774270] (-) TimerEvent: {}
+[14.874812] (-) TimerEvent: {}
+[14.975369] (-) TimerEvent: {}
+[15.075900] (-) TimerEvent: {}
+[15.177276] (-) TimerEvent: {}
+[15.277901] (-) TimerEvent: {}
+[15.362506] (vision_interface) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/ball__type_support.cpp.o\x1b[0m\n'}
+[15.378043] (-) TimerEvent: {}
+[15.478551] (-) TimerEvent: {}
+[15.579082] (-) TimerEvent: {}
+[15.679977] (-) TimerEvent: {}
+[15.780597] (-) TimerEvent: {}
+[15.881146] (-) TimerEvent: {}
+[15.981666] (-) TimerEvent: {}
+[16.082208] (-) TimerEvent: {}
+[16.097481] (vision_interface) StdoutLine: {'line': b'[ 11%] \x1b[32m\x1b[1mLinking CXX shared library libvision_interface__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[16.182363] (-) TimerEvent: {}
+[16.255297] (vision_interface) StdoutLine: {'line': b'[ 11%] Built target vision_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[16.275007] (vision_interface) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[16.282482] (-) TimerEvent: {}
+[16.382946] (-) TimerEvent: {}
+[16.483445] (-) TimerEvent: {}
+[16.583996] (-) TimerEvent: {}
+[16.684589] (-) TimerEvent: {}
+[16.785075] (-) TimerEvent: {}
+[16.886108] (-) TimerEvent: {}
+[16.986647] (-) TimerEvent: {}
+[17.087127] (-) TimerEvent: {}
+[17.187635] (-) TimerEvent: {}
+[17.288146] (-) TimerEvent: {}
+[17.388906] (-) TimerEvent: {}
+[17.466527] (vision_interface) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/detected_object__type_support.cpp.o\x1b[0m\n'}
+[17.489055] (-) TimerEvent: {}
+[17.590005] (-) TimerEvent: {}
+[17.690589] (-) TimerEvent: {}
+[17.791140] (-) TimerEvent: {}
+[17.891916] (-) TimerEvent: {}
+[17.992507] (-) TimerEvent: {}
+[18.093051] (-) TimerEvent: {}
+[18.193655] (-) TimerEvent: {}
+[18.204619] (vision_interface) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/detections__type_support.cpp.o\x1b[0m\n'}
+[18.293801] (-) TimerEvent: {}
+[18.394433] (-) TimerEvent: {}
+[18.494966] (-) TimerEvent: {}
+[18.595554] (-) TimerEvent: {}
+[18.696087] (-) TimerEvent: {}
+[18.796659] (-) TimerEvent: {}
+[18.897272] (-) TimerEvent: {}
+[18.997837] (-) TimerEvent: {}
+[19.098374] (-) TimerEvent: {}
+[19.101717] (vision_interface) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/line_segments__type_support.cpp.o\x1b[0m\n'}
+[19.198518] (-) TimerEvent: {}
+[19.299044] (-) TimerEvent: {}
+[19.399584] (-) TimerEvent: {}
+[19.500242] (-) TimerEvent: {}
+[19.600780] (-) TimerEvent: {}
+[19.701342] (-) TimerEvent: {}
+[19.801885] (-) TimerEvent: {}
+[19.865866] (vision_interface) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/cal_param__type_support.cpp.o\x1b[0m\n'}
+[19.902033] (-) TimerEvent: {}
+[20.003279] (-) TimerEvent: {}
+[20.103835] (-) TimerEvent: {}
+[20.204371] (-) TimerEvent: {}
+[20.304923] (-) TimerEvent: {}
+[20.405506] (-) TimerEvent: {}
+[20.506039] (-) TimerEvent: {}
+[20.606647] (-) TimerEvent: {}
+[20.609005] (vision_interface) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/detections_track__type_support.cpp.o\x1b[0m\n'}
+[20.706756] (-) TimerEvent: {}
+[20.807275] (-) TimerEvent: {}
+[20.907807] (-) TimerEvent: {}
+[21.008740] (-) TimerEvent: {}
+[21.109293] (-) TimerEvent: {}
+[21.209894] (-) TimerEvent: {}
+[21.310420] (-) TimerEvent: {}
+[21.410940] (-) TimerEvent: {}
+[21.481934] (vision_interface) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/segmentation_point__type_support.cpp.o\x1b[0m\n'}
+[21.511102] (-) TimerEvent: {}
+[21.611791] (-) TimerEvent: {}
+[21.712323] (-) TimerEvent: {}
+[21.812863] (-) TimerEvent: {}
+[21.913433] (-) TimerEvent: {}
+[22.013995] (-) TimerEvent: {}
+[22.114688] (-) TimerEvent: {}
+[22.179469] (vision_interface) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/segmentation_line__type_support.cpp.o\x1b[0m\n'}
+[22.214835] (-) TimerEvent: {}
+[22.315429] (-) TimerEvent: {}
+[22.415991] (-) TimerEvent: {}
+[22.516571] (-) TimerEvent: {}
+[22.617175] (-) TimerEvent: {}
+[22.717731] (-) TimerEvent: {}
+[22.818322] (-) TimerEvent: {}
+[22.861754] (vision_interface) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/segmentation_result__type_support.cpp.o\x1b[0m\n'}
+[22.918469] (-) TimerEvent: {}
+[23.018988] (-) TimerEvent: {}
+[23.119507] (-) TimerEvent: {}
+[23.220066] (-) TimerEvent: {}
+[23.320902] (-) TimerEvent: {}
+[23.421689] (-) TimerEvent: {}
+[23.522290] (-) TimerEvent: {}
+[23.622893] (-) TimerEvent: {}
+[23.723551] (-) TimerEvent: {}
+[23.751394] (vision_interface) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/image_head_position__type_support.cpp.o\x1b[0m\n'}
+[23.823652] (-) TimerEvent: {}
+[23.924189] (-) TimerEvent: {}
+[24.024722] (-) TimerEvent: {}
+[24.125899] (-) TimerEvent: {}
+[24.226562] (-) TimerEvent: {}
+[24.327135] (-) TimerEvent: {}
+[24.427671] (-) TimerEvent: {}
+[24.517682] (vision_interface) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/ball__type_support.cpp.o\x1b[0m\n'}
+[24.527818] (-) TimerEvent: {}
+[24.628453] (-) TimerEvent: {}
+[24.729056] (-) TimerEvent: {}
+[24.829627] (-) TimerEvent: {}
+[24.930189] (-) TimerEvent: {}
+[25.030716] (-) TimerEvent: {}
+[25.131256] (-) TimerEvent: {}
+[25.231832] (-) TimerEvent: {}
+[25.241523] (vision_interface) StdoutLine: {'line': b'[ 23%] \x1b[32m\x1b[1mLinking CXX shared library libvision_interface__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[25.332036] (-) TimerEvent: {}
+[25.394754] (vision_interface) StdoutLine: {'line': b'[ 23%] Built target vision_interface__rosidl_typesupport_introspection_cpp\n'}
+[25.432182] (-) TimerEvent: {}
+[25.532719] (-) TimerEvent: {}
+[25.633305] (-) TimerEvent: {}
+[25.733781] (-) TimerEvent: {}
+[25.834329] (vision_interface) StdoutLine: {'line': b'running egg_info\n'}
+[25.834771] (-) TimerEvent: {}
+[25.835724] (vision_interface) StdoutLine: {'line': b'creating vision_interface.egg-info\n'}
+[25.836346] (vision_interface) StdoutLine: {'line': b'writing vision_interface.egg-info/PKG-INFO\n'}
+[25.836516] (vision_interface) StdoutLine: {'line': b'writing dependency_links to vision_interface.egg-info/dependency_links.txt\n'}
+[25.836672] (vision_interface) StdoutLine: {'line': b'writing top-level names to vision_interface.egg-info/top_level.txt\n'}
+[25.836956] (vision_interface) StdoutLine: {'line': b"writing manifest file 'vision_interface.egg-info/SOURCES.txt'\n"}
+[25.842283] (vision_interface) StdoutLine: {'line': b"reading manifest file 'vision_interface.egg-info/SOURCES.txt'\n"}
+[25.843310] (vision_interface) StdoutLine: {'line': b"writing manifest file 'vision_interface.egg-info/SOURCES.txt'\n"}
+[25.899383] (vision_interface) StdoutLine: {'line': b'[ 23%] Built target ament_cmake_python_build_vision_interface_egg\n'}
+[25.918159] (vision_interface) StdoutLine: {'line': b'[ 24%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[25.934926] (-) TimerEvent: {}
+[26.035401] (-) TimerEvent: {}
+[26.135859] (-) TimerEvent: {}
+[26.236369] (-) TimerEvent: {}
+[26.336854] (-) TimerEvent: {}
+[26.437340] (-) TimerEvent: {}
+[26.537836] (-) TimerEvent: {}
+[26.638392] (-) TimerEvent: {}
+[26.738938] (-) TimerEvent: {}
+[26.828232] (vision_interface) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/detected_object__type_support.cpp.o\x1b[0m\n'}
+[26.839084] (-) TimerEvent: {}
+[26.939592] (-) TimerEvent: {}
+[27.040138] (-) TimerEvent: {}
+[27.140732] (-) TimerEvent: {}
+[27.241305] (-) TimerEvent: {}
+[27.342004] (-) TimerEvent: {}
+[27.350853] (vision_interface) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/line_segments__type_support.cpp.o\x1b[0m\n'}
+[27.442201] (-) TimerEvent: {}
+[27.542714] (-) TimerEvent: {}
+[27.643250] (-) TimerEvent: {}
+[27.744422] (-) TimerEvent: {}
+[27.813707] (vision_interface) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/cal_param__type_support.cpp.o\x1b[0m\n'}
+[27.844621] (-) TimerEvent: {}
+[27.945302] (-) TimerEvent: {}
+[28.045854] (-) TimerEvent: {}
+[28.146397] (-) TimerEvent: {}
+[28.247023] (-) TimerEvent: {}
+[28.295822] (vision_interface) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/detections_track__type_support.cpp.o\x1b[0m\n'}
+[28.347197] (-) TimerEvent: {}
+[28.447750] (-) TimerEvent: {}
+[28.548335] (-) TimerEvent: {}
+[28.648835] (-) TimerEvent: {}
+[28.749363] (-) TimerEvent: {}
+[28.759792] (vision_interface) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/segmentation_point__type_support.cpp.o\x1b[0m\n'}
+[28.849571] (-) TimerEvent: {}
+[28.950442] (-) TimerEvent: {}
+[29.050976] (-) TimerEvent: {}
+[29.151545] (-) TimerEvent: {}
+[29.199579] (vision_interface) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/segmentation_line__type_support.cpp.o\x1b[0m\n'}
+[29.251692] (-) TimerEvent: {}
+[29.352208] (-) TimerEvent: {}
+[29.452748] (-) TimerEvent: {}
+[29.553295] (-) TimerEvent: {}
+[29.653835] (-) TimerEvent: {}
+[29.741525] (vision_interface) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/segmentation_result__type_support.cpp.o\x1b[0m\n'}
+[29.753987] (-) TimerEvent: {}
+[29.854497] (-) TimerEvent: {}
+[29.955051] (-) TimerEvent: {}
+[30.055561] (-) TimerEvent: {}
+[30.156081] (-) TimerEvent: {}
+[30.256653] (-) TimerEvent: {}
+[30.269502] (vision_interface) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/image_head_position__type_support.cpp.o\x1b[0m\n'}
+[30.356857] (-) TimerEvent: {}
+[30.457487] (-) TimerEvent: {}
+[30.558018] (-) TimerEvent: {}
+[30.658614] (-) TimerEvent: {}
+[30.751074] (vision_interface) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/ball__type_support.cpp.o\x1b[0m\n'}
+[30.758743] (-) TimerEvent: {}
+[30.859247] (-) TimerEvent: {}
+[30.959778] (-) TimerEvent: {}
+[31.060320] (-) TimerEvent: {}
+[31.160852] (-) TimerEvent: {}
+[31.261402] (-) TimerEvent: {}
+[31.270548] (vision_interface) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/detections__type_support.cpp.o\x1b[0m\n'}
+[31.361553] (-) TimerEvent: {}
+[31.462072] (-) TimerEvent: {}
+[31.562784] (-) TimerEvent: {}
+[31.663867] (-) TimerEvent: {}
+[31.764395] (-) TimerEvent: {}
+[31.803588] (vision_interface) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX shared library libvision_interface__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[31.864546] (-) TimerEvent: {}
+[31.877787] (vision_interface) StdoutLine: {'line': b'[ 35%] Built target vision_interface__rosidl_typesupport_cpp\n'}
+[31.897526] (vision_interface) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[31.964667] (-) TimerEvent: {}
+[32.065534] (-) TimerEvent: {}
+[32.166124] (-) TimerEvent: {}
+[32.266562] (-) TimerEvent: {}
+[32.367017] (-) TimerEvent: {}
+[32.467534] (-) TimerEvent: {}
+[32.567976] (-) TimerEvent: {}
+[32.668476] (-) TimerEvent: {}
+[32.768963] (-) TimerEvent: {}
+[32.869530] (-) TimerEvent: {}
+[32.969982] (-) TimerEvent: {}
+[33.070470] (-) TimerEvent: {}
+[33.170954] (-) TimerEvent: {}
+[33.271530] (-) TimerEvent: {}
+[33.372216] (-) TimerEvent: {}
+[33.472731] (-) TimerEvent: {}
+[33.573236] (-) TimerEvent: {}
+[33.673753] (-) TimerEvent: {}
+[33.774272] (-) TimerEvent: {}
+[33.874840] (-) TimerEvent: {}
+[33.884375] (vision_interface) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/detected_object__functions.c.o\x1b[0m\n'}
+[33.974984] (-) TimerEvent: {}
+[33.980487] (vision_interface) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/cal_param__functions.c.o\x1b[0m\n'}
+[34.075144] (-) TimerEvent: {}
+[34.079593] (vision_interface) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/detections_track__functions.c.o\x1b[0m\n'}
+[34.175297] (-) TimerEvent: {}
+[34.175745] (vision_interface) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/segmentation_point__functions.c.o\x1b[0m\n'}
+[34.268211] (vision_interface) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/segmentation_line__functions.c.o\x1b[0m\n'}
+[34.275504] (-) TimerEvent: {}
+[34.362177] (vision_interface) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/segmentation_result__functions.c.o\x1b[0m\n'}
+[34.375668] (-) TimerEvent: {}
+[34.458044] (vision_interface) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/image_head_position__functions.c.o\x1b[0m\n'}
+[34.475832] (-) TimerEvent: {}
+[34.562136] (vision_interface) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/ball__functions.c.o\x1b[0m\n'}
+[34.575975] (-) TimerEvent: {}
+[34.645297] (vision_interface) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/line_segments__functions.c.o\x1b[0m\n'}
+[34.676119] (-) TimerEvent: {}
+[34.733669] (vision_interface) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/detections__functions.c.o\x1b[0m\n'}
+[34.776266] (-) TimerEvent: {}
+[34.833039] (vision_interface) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking C shared library libvision_interface__rosidl_generator_c.so\x1b[0m\n'}
+[34.876448] (-) TimerEvent: {}
+[34.904413] (vision_interface) StdoutLine: {'line': b'[ 47%] Built target vision_interface__rosidl_generator_c\n'}
+[34.925408] (vision_interface) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[34.976553] (-) TimerEvent: {}
+[35.077030] (-) TimerEvent: {}
+[35.177713] (-) TimerEvent: {}
+[35.278192] (-) TimerEvent: {}
+[35.378720] (-) TimerEvent: {}
+[35.479225] (-) TimerEvent: {}
+[35.579720] (-) TimerEvent: {}
+[35.680275] (-) TimerEvent: {}
+[35.780751] (-) TimerEvent: {}
+[35.881226] (-) TimerEvent: {}
+[35.981756] (-) TimerEvent: {}
+[36.082359] (-) TimerEvent: {}
+[36.183174] (-) TimerEvent: {}
+[36.261238] (vision_interface) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/detected_object__type_support_c.cpp.o\x1b[0m\n'}
+[36.283334] (-) TimerEvent: {}
+[36.383874] (-) TimerEvent: {}
+[36.484455] (-) TimerEvent: {}
+[36.585088] (-) TimerEvent: {}
+[36.685762] (-) TimerEvent: {}
+[36.786288] (-) TimerEvent: {}
+[36.859046] (vision_interface) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/detections__type_support_c.cpp.o\x1b[0m\n'}
+[36.886435] (-) TimerEvent: {}
+[36.986918] (-) TimerEvent: {}
+[37.087473] (-) TimerEvent: {}
+[37.188096] (-) TimerEvent: {}
+[37.288697] (-) TimerEvent: {}
+[37.389257] (-) TimerEvent: {}
+[37.439753] (vision_interface) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/line_segments__type_support_c.cpp.o\x1b[0m\n'}
+[37.489394] (-) TimerEvent: {}
+[37.589913] (-) TimerEvent: {}
+[37.690455] (-) TimerEvent: {}
+[37.790992] (-) TimerEvent: {}
+[37.891546] (-) TimerEvent: {}
+[37.992092] (-) TimerEvent: {}
+[38.092638] (-) TimerEvent: {}
+[38.097847] (vision_interface) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/cal_param__type_support_c.cpp.o\x1b[0m\n'}
+[38.192787] (-) TimerEvent: {}
+[38.293381] (-) TimerEvent: {}
+[38.393958] (-) TimerEvent: {}
+[38.494549] (-) TimerEvent: {}
+[38.595122] (-) TimerEvent: {}
+[38.652146] (vision_interface) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/detections_track__type_support_c.cpp.o\x1b[0m\n'}
+[38.695351] (-) TimerEvent: {}
+[38.795877] (-) TimerEvent: {}
+[38.896441] (-) TimerEvent: {}
+[38.997085] (-) TimerEvent: {}
+[39.097802] (-) TimerEvent: {}
+[39.198402] (-) TimerEvent: {}
+[39.298938] (-) TimerEvent: {}
+[39.313229] (vision_interface) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/segmentation_point__type_support_c.cpp.o\x1b[0m\n'}
+[39.399130] (-) TimerEvent: {}
+[39.499664] (-) TimerEvent: {}
+[39.600247] (-) TimerEvent: {}
+[39.700796] (-) TimerEvent: {}
+[39.801413] (-) TimerEvent: {}
+[39.902474] (-) TimerEvent: {}
+[39.985759] (vision_interface) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/segmentation_line__type_support_c.cpp.o\x1b[0m\n'}
+[40.002620] (-) TimerEvent: {}
+[40.103123] (-) TimerEvent: {}
+[40.203658] (-) TimerEvent: {}
+[40.304252] (-) TimerEvent: {}
+[40.404800] (-) TimerEvent: {}
+[40.505475] (-) TimerEvent: {}
+[40.606101] (-) TimerEvent: {}
+[40.646831] (vision_interface) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/segmentation_result__type_support_c.cpp.o\x1b[0m\n'}
+[40.706348] (-) TimerEvent: {}
+[40.806945] (-) TimerEvent: {}
+[40.907486] (-) TimerEvent: {}
+[41.008029] (-) TimerEvent: {}
+[41.108584] (-) TimerEvent: {}
+[41.209621] (-) TimerEvent: {}
+[41.299960] (vision_interface) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/image_head_position__type_support_c.cpp.o\x1b[0m\n'}
+[41.309766] (-) TimerEvent: {}
+[41.410277] (-) TimerEvent: {}
+[41.510828] (-) TimerEvent: {}
+[41.611354] (-) TimerEvent: {}
+[41.711929] (-) TimerEvent: {}
+[41.813008] (-) TimerEvent: {}
+[41.913569] (-) TimerEvent: {}
+[41.957570] (vision_interface) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/ball__type_support_c.cpp.o\x1b[0m\n'}
+[42.013716] (-) TimerEvent: {}
+[42.114249] (-) TimerEvent: {}
+[42.214809] (-) TimerEvent: {}
+[42.315508] (-) TimerEvent: {}
+[42.416040] (-) TimerEvent: {}
+[42.516725] (-) TimerEvent: {}
+[42.537870] (vision_interface) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libvision_interface__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[42.616905] (-) TimerEvent: {}
+[42.675885] (vision_interface) StdoutLine: {'line': b'[ 59%] Built target vision_interface__rosidl_typesupport_fastrtps_c\n'}
+[42.694261] (vision_interface) StdoutLine: {'line': b'[ 60%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[42.717026] (-) TimerEvent: {}
+[42.817581] (-) TimerEvent: {}
+[42.918127] (-) TimerEvent: {}
+[43.018657] (-) TimerEvent: {}
+[43.119151] (-) TimerEvent: {}
+[43.219622] (-) TimerEvent: {}
+[43.320120] (-) TimerEvent: {}
+[43.420665] (-) TimerEvent: {}
+[43.521335] (-) TimerEvent: {}
+[43.608769] (vision_interface) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/detected_object__type_support.cpp.o\x1b[0m\n'}
+[43.621435] (-) TimerEvent: {}
+[43.667351] (vision_interface) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/line_segments__type_support.cpp.o\x1b[0m\n'}
+[43.721583] (-) TimerEvent: {}
+[43.724233] (vision_interface) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/cal_param__type_support.cpp.o\x1b[0m\n'}
+[43.781603] (vision_interface) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/detections_track__type_support.cpp.o\x1b[0m\n'}
+[43.821741] (-) TimerEvent: {}
+[43.838605] (vision_interface) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/segmentation_point__type_support.cpp.o\x1b[0m\n'}
+[43.895218] (vision_interface) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/segmentation_line__type_support.cpp.o\x1b[0m\n'}
+[43.921878] (-) TimerEvent: {}
+[43.948412] (vision_interface) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/segmentation_result__type_support.cpp.o\x1b[0m\n'}
+[44.003196] (vision_interface) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/image_head_position__type_support.cpp.o\x1b[0m\n'}
+[44.022019] (-) TimerEvent: {}
+[44.059139] (vision_interface) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/ball__type_support.cpp.o\x1b[0m\n'}
+[44.112712] (vision_interface) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/detections__type_support.cpp.o\x1b[0m\n'}
+[44.122152] (-) TimerEvent: {}
+[44.166778] (vision_interface) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libvision_interface__rosidl_typesupport_c.so\x1b[0m\n'}
+[44.222322] (-) TimerEvent: {}
+[44.237662] (vision_interface) StdoutLine: {'line': b'[ 70%] Built target vision_interface__rosidl_typesupport_c\n'}
+[44.259233] (vision_interface) StdoutLine: {'line': b'[ 71%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[44.322450] (-) TimerEvent: {}
+[44.422965] (-) TimerEvent: {}
+[44.523468] (-) TimerEvent: {}
+[44.623980] (-) TimerEvent: {}
+[44.724792] (-) TimerEvent: {}
+[44.825380] (-) TimerEvent: {}
+[44.925896] (-) TimerEvent: {}
+[45.026611] (-) TimerEvent: {}
+[45.127102] (-) TimerEvent: {}
+[45.227813] (-) TimerEvent: {}
+[45.328549] (-) TimerEvent: {}
+[45.429154] (-) TimerEvent: {}
+[45.529724] (-) TimerEvent: {}
+[45.530772] (vision_interface) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/detected_object__type_support.c.o\x1b[0m\n'}
+[45.621810] (vision_interface) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/cal_param__type_support.c.o\x1b[0m\n'}
+[45.629856] (-) TimerEvent: {}
+[45.683949] (vision_interface) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/detections_track__type_support.c.o\x1b[0m\n'}
+[45.730014] (-) TimerEvent: {}
+[45.767159] (vision_interface) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/segmentation_point__type_support.c.o\x1b[0m\n'}
+[45.829980] (vision_interface) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/segmentation_line__type_support.c.o\x1b[0m\n'}
+[45.830417] (-) TimerEvent: {}
+[45.893352] (vision_interface) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/segmentation_result__type_support.c.o\x1b[0m\n'}
+[45.930648] (-) TimerEvent: {}
+[45.976377] (vision_interface) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/image_head_position__type_support.c.o\x1b[0m\n'}
+[46.030800] (-) TimerEvent: {}
+[46.049183] (vision_interface) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/ball__type_support.c.o\x1b[0m\n'}
+[46.110619] (vision_interface) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/line_segments__type_support.c.o\x1b[0m\n'}
+[46.130941] (-) TimerEvent: {}
+[46.182975] (vision_interface) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/detections__type_support.c.o\x1b[0m\n'}
+[46.231083] (-) TimerEvent: {}
+[46.274625] (vision_interface) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libvision_interface__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[46.331233] (-) TimerEvent: {}
+[46.338012] (vision_interface) StdoutLine: {'line': b'[ 82%] Built target vision_interface__rosidl_typesupport_introspection_c\n'}
+[46.374282] (vision_interface) StdoutLine: {'line': b'[ 82%] Built target vision_interface\n'}
+[46.414070] (vision_interface) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[46.431350] (-) TimerEvent: {}
+[46.531803] (-) TimerEvent: {}
+[46.632271] (-) TimerEvent: {}
+[46.732797] (-) TimerEvent: {}
+[46.833320] (-) TimerEvent: {}
+[46.933789] (-) TimerEvent: {}
+[47.034275] (-) TimerEvent: {}
+[47.134747] (-) TimerEvent: {}
+[47.235225] (-) TimerEvent: {}
+[47.335701] (-) TimerEvent: {}
+[47.436183] (-) TimerEvent: {}
+[47.536662] (-) TimerEvent: {}
+[47.637149] (-) TimerEvent: {}
+[47.737615] (-) TimerEvent: {}
+[47.838401] (-) TimerEvent: {}
+[47.938911] (-) TimerEvent: {}
+[48.039403] (-) TimerEvent: {}
+[48.139921] (-) TimerEvent: {}
+[48.240410] (-) TimerEvent: {}
+[48.340893] (-) TimerEvent: {}
+[48.441403] (-) TimerEvent: {}
+[48.541891] (-) TimerEvent: {}
+[48.642451] (-) TimerEvent: {}
+[48.742967] (-) TimerEvent: {}
+[48.843674] (-) TimerEvent: {}
+[48.884371] (vision_interface) StdoutLine: {'line': b'[ 83%] Built target vision_interface__py\n'}
+[48.925387] (vision_interface) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_detected_object_s.c.o\x1b[0m\n'}
+[48.943899] (-) TimerEvent: {}
+[49.044538] (-) TimerEvent: {}
+[49.145052] (-) TimerEvent: {}
+[49.187209] (vision_interface) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_cal_param_s.c.o\x1b[0m\n'}
+[49.245222] (-) TimerEvent: {}
+[49.345743] (-) TimerEvent: {}
+[49.380664] (vision_interface) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_detections_track_s.c.o\x1b[0m\n'}
+[49.445860] (-) TimerEvent: {}
+[49.546473] (-) TimerEvent: {}
+[49.597356] (vision_interface) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_segmentation_point_s.c.o\x1b[0m\n'}
+[49.646608] (-) TimerEvent: {}
+[49.747228] (-) TimerEvent: {}
+[49.797939] (vision_interface) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_segmentation_line_s.c.o\x1b[0m\n'}
+[49.847415] (-) TimerEvent: {}
+[49.947973] (-) TimerEvent: {}
+[49.974979] (vision_interface) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_segmentation_result_s.c.o\x1b[0m\n'}
+[50.048126] (-) TimerEvent: {}
+[50.148766] (-) TimerEvent: {}
+[50.152971] (vision_interface) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_image_head_position_s.c.o\x1b[0m\n'}
+[50.248904] (-) TimerEvent: {}
+[50.338199] (vision_interface) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_ball_s.c.o\x1b[0m\n'}
+[50.349050] (-) TimerEvent: {}
+[50.449616] (-) TimerEvent: {}
+[50.534106] (vision_interface) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_line_segments_s.c.o\x1b[0m\n'}
+[50.549768] (-) TimerEvent: {}
+[50.650269] (-) TimerEvent: {}
+[50.749396] (vision_interface) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_detections_s.c.o\x1b[0m\n'}
+[50.750341] (-) TimerEvent: {}
+[50.850748] (-) TimerEvent: {}
+[50.951363] (-) TimerEvent: {}
+[50.963703] (vision_interface) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_interface/libvision_interface__rosidl_generator_py.so\x1b[0m\n'}
+[51.041640] (vision_interface) StdoutLine: {'line': b'[ 94%] Built target vision_interface__rosidl_generator_py\n'}
+[51.051513] (-) TimerEvent: {}
+[51.077327] (vision_interface) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/vision_interface/_vision_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[51.151707] (-) TimerEvent: {}
+[51.252294] (-) TimerEvent: {}
+[51.302878] (vision_interface) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[51.352502] (-) TimerEvent: {}
+[51.379710] (vision_interface) StdoutLine: {'line': b'[ 96%] Built target vision_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[51.413262] (vision_interface) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/vision_interface/_vision_interface_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[51.452661] (-) TimerEvent: {}
+[51.553231] (-) TimerEvent: {}
+[51.638485] (vision_interface) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[51.653376] (-) TimerEvent: {}
+[51.721732] (vision_interface) StdoutLine: {'line': b'[ 98%] Built target vision_interface__rosidl_typesupport_c__pyext\n'}
+[51.753522] (-) TimerEvent: {}
+[51.757780] (vision_interface) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/vision_interface/_vision_interface_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[51.853665] (-) TimerEvent: {}
+[51.954189] (-) TimerEvent: {}
+[51.980562] (vision_interface) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[52.052635] (vision_interface) StdoutLine: {'line': b'[100%] Built target vision_interface__rosidl_typesupport_introspection_c__pyext\n'}
+[52.054503] (-) TimerEvent: {}
+[52.077678] (vision_interface) CommandEnded: {'returncode': 0}
+[52.079117] (vision_interface) JobProgress: {'identifier': 'vision_interface', 'progress': 'install'}
+[52.097451] (vision_interface) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface'], 'cwd': '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'booster'), ('SSH_CLIENT', '10.12.100.187 33470 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:'), ('BROWSER', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/booster'), ('OLDPWD', '/home/booster/Workspace/BoosterK1_CodeBase'), ('TERM_PROGRAM_VERSION', '1.111.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-920dc37c-99ab-4822-b059-69acf6f80816.sock'), ('JETSON_L4T', '36.4.3'), ('ROS_PYTHON_VERSION', '3'), ('JETSON_MODEL', 'NVIDIA Jetson Orin NX Engineering Reference Developer Kit Super'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/booster/.vscode-server/cli/servers/Stable-ce099c1ed25d9eb3076c11e4a280f3eb52b4fbeb/server/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'booster'), ('JETSON_MODULE', 'NVIDIA Jetson Orin NX (8GB ram)'), ('JETSON_SERIAL_NUMBER', '1421625075226'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/local/cuda/bin:/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('FASTRTPS_DEFAULT_PROFILES_FILE', '/opt/booster/BoosterRos2/fastdds_profile.xml'), ('CUDA_ROOT', '/usr/local/cuda'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra234'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-897659084f.sock'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CUBA_HOME', '/usr/local/cuda'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('JETSON_CUDA_ARCH_BIN', '8.7'), ('PWD', '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface'), ('LC_ALL', 'en_AU.utf8'), ('SSH_CONNECTION', '10.12.100.187 33470 10.12.100.21 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('JETSON_JETPACK', '6.2'), ('JETSON_P_NUMBER', 'p3767-0001'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[52.116030] (vision_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[52.116450] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/rosidl_interfaces/vision_interface\n'}
+[52.116769] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface\n'}
+[52.117006] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg\n'}
+[52.117628] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections.h\n'}
+[52.117889] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections_track.h\n'}
+[52.118013] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detected_object.h\n'}
+[52.118176] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_result.h\n'}
+[52.118338] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[52.118501] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_line.h\n'}
+[52.118645] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/line_segments.h\n'}
+[52.118863] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/cal_param.h\n'}
+[52.119038] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_point.h\n'}
+[52.119361] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/image_head_position.h\n'}
+[52.119547] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/ball.h\n'}
+[52.119700] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail\n'}
+[52.119950] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__functions.c\n'}
+[52.120155] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__struct.h\n'}
+[52.120356] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__functions.h\n'}
+[52.120584] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__functions.c\n'}
+[52.120796] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__functions.h\n'}
+[52.121010] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__struct.h\n'}
+[52.121569] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__functions.c\n'}
+[52.121728] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__struct.h\n'}
+[52.123707] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__functions.h\n'}
+[52.123947] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__functions.h\n'}
+[52.124622] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__functions.c\n'}
+[52.124779] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__functions.c\n'}
+[52.124893] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.h\n'}
+[52.125426] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__functions.h\n'}
+[52.125557] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__functions.h\n'}
+[52.125668] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__struct.h\n'}
+[52.125772] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__functions.h\n'}
+[52.125876] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.h\n'}
+[52.125979] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__functions.h\n'}
+[52.126987] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__functions.h\n'}
+[52.127384] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.h\n'}
+[52.127675] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__struct.h\n'}
+[52.127832] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__functions.c\n'}
+[52.128044] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__struct.h\n'}
+[52.128199] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__functions.c\n'}
+[52.128328] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.h\n'}
+[52.128473] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__functions.c\n'}
+[52.128599] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__struct.h\n'}
+[52.128718] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.h\n'}
+[52.128847] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__struct.h\n'}
+[52.128971] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__struct.h\n'}
+[52.129072] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.h\n'}
+[52.129577] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.h\n'}
+[52.129731] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__struct.h\n'}
+[52.129881] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__functions.h\n'}
+[52.130048] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__functions.c\n'}
+[52.130154] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__functions.c\n'}
+[52.130256] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.h\n'}
+[52.130410] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.h\n'}
+[52.130520] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.h\n'}
+[52.130619] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/library_path.sh\n'}
+[52.130719] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/library_path.dsv\n'}
+[52.130844] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_c.so\n'}
+[52.130987] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_c.so" to ""\n'}
+[52.131296] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface\n'}
+[52.131588] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg\n'}
+[52.131744] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[52.131952] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail\n'}
+[52.132099] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_fastrtps_c.h\n'}
+[52.132274] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_fastrtps_c.h\n'}
+[52.132452] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_fastrtps_c.h\n'}
+[52.132606] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_fastrtps_c.h\n'}
+[52.132733] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_fastrtps_c.h\n'}
+[52.132875] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_fastrtps_c.h\n'}
+[52.132984] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_fastrtps_c.h\n'}
+[52.133419] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_fastrtps_c.h\n'}
+[52.133704] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_fastrtps_c.h\n'}
+[52.133868] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_fastrtps_c.h\n'}
+[52.134042] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[52.134643] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[52.134858] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface\n'}
+[52.135009] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg\n'}
+[52.135522] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/ball.hpp\n'}
+[52.135681] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections.hpp\n'}
+[52.135796] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/cal_param.hpp\n'}
+[52.135905] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/image_head_position.hpp\n'}
+[52.136141] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/line_segments.hpp\n'}
+[52.136498] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[52.136695] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_result.hpp\n'}
+[52.136975] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_line.hpp\n'}
+[52.137789] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections_track.hpp\n'}
+[52.137991] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detected_object.hpp\n'}
+[52.138134] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail\n'}
+[52.138267] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__traits.hpp\n'}
+[52.138460] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__struct.hpp\n'}
+[52.138643] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__builder.hpp\n'}
+[52.138834] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__struct.hpp\n'}
+[52.139414] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__traits.hpp\n'}
+[52.139640] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__struct.hpp\n'}
+[52.140167] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__struct.hpp\n'}
+[52.140460] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.hpp\n'}
+[52.140657] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__builder.hpp\n'}
+[52.140856] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.hpp\n'}
+[52.141040] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.hpp\n'}
+[52.141732] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__struct.hpp\n'}
+[52.141965] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__struct.hpp\n'}
+[52.142172] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__traits.hpp\n'}
+[52.142348] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__traits.hpp\n'}
+[52.145870] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__builder.hpp\n'}
+[52.146132] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__builder.hpp\n'}
+[52.146293] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__builder.hpp\n'}
+[52.146426] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__builder.hpp\n'}
+[52.146590] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.hpp\n'}
+[52.146740] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__builder.hpp\n'}
+[52.146859] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__struct.hpp\n'}
+[52.146988] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__struct.hpp\n'}
+[52.147365] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.hpp\n'}
+[52.147581] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.hpp\n'}
+[52.147708] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__builder.hpp\n'}
+[52.147852] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.hpp\n'}
+[52.148010] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__struct.hpp\n'}
+[52.148115] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__traits.hpp\n'}
+[52.148251] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__struct.hpp\n'}
+[52.148356] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__traits.hpp\n'}
+[52.148455] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__builder.hpp\n'}
+[52.148632] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.hpp\n'}
+[52.148795] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__traits.hpp\n'}
+[52.148976] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__builder.hpp\n'}
+[52.149083] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.hpp\n'}
+[52.149897] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.hpp\n'}
+[52.150110] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__traits.hpp\n'}
+[52.150234] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__traits.hpp\n'}
+[52.150371] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__traits.hpp\n'}
+[52.150545] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_point.hpp\n'}
+[52.150704] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface\n'}
+[52.150818] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg\n'}
+[52.150962] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[52.151079] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail\n'}
+[52.151471] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/dds_fastrtps\n'}
+[52.151667] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.151779] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.151882] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.151984] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152083] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152183] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152282] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152379] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152478] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152573] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[52.152742] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[52.152934] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[52.153043] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface\n'}
+[52.153644] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg\n'}
+[52.153778] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[52.153923] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail\n'}
+[52.154030] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_introspection_c.h\n'}
+[52.154170] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.c\n'}
+[52.154287] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.c\n'}
+[52.154575] (-) TimerEvent: {}
+[52.156846] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.c\n'}
+[52.157080] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_introspection_c.h\n'}
+[52.157565] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_introspection_c.h\n'}
+[52.157811] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_introspection_c.h\n'}
+[52.157971] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.c\n'}
+[52.158085] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.c\n'}
+[52.158191] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_introspection_c.h\n'}
+[52.158335] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_introspection_c.h\n'}
+[52.158458] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_introspection_c.h\n'}
+[52.158561] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.c\n'}
+[52.158660] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.c\n'}
+[52.158758] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.c\n'}
+[52.158855] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_introspection_c.h\n'}
+[52.158955] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.c\n'}
+[52.160009] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.c\n'}
+[52.160174] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_introspection_c.h\n'}
+[52.160394] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_introspection_c.h\n'}
+[52.160544] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_c.so\n'}
+[52.160861] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_c.so" to ""\n'}
+[52.161018] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_c.so\n'}
+[52.161562] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_c.so" to ""\n'}
+[52.161759] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface\n'}
+[52.161872] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg\n'}
+[52.162009] (vision_interface) StdoutLine: {'line': b'-- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail\n'}
+[52.162125] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.162247] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.cpp\n'}
+[52.162358] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.162642] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.cpp\n'}
+[52.162759] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.cpp\n'}
+[52.162901] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.cpp\n'}
+[52.163018] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.cpp\n'}
+[52.163140] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.163581] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.cpp\n'}
+[52.163706] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.cpp\n'}
+[52.163844] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.164003] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.cpp\n'}
+[52.164112] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.164265] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.cpp\n'}
+[52.164564] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.164704] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.164865] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.165014] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.165398] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_introspection_cpp.hpp\n'}
+[52.165709] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.cpp\n'}
+[52.165879] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[52.166745] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[52.166913] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_cpp.so\n'}
+[52.167641] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_cpp.so" to ""\n'}
+[52.167812] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/pythonpath.sh\n'}
+[52.168011] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/pythonpath.dsv\n'}
+[52.168233] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info\n'}
+[52.168590] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[52.168809] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[52.168963] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[52.169153] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[52.169630] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface\n'}
+[52.169845] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/libvision_interface__rosidl_generator_py.so\n'}
+[52.170157] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/_vision_interface_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[52.170449] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[52.170732] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[52.170985] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/__init__.py\n'}
+[52.171138] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[52.171577] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/_vision_interface_s.ep.rosidl_typesupport_c.c\n'}
+[52.172816] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/_vision_interface_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[52.173040] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg\n'}
+[52.173515] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_ball_s.c\n'}
+[52.173649] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_result_s.c\n'}
+[52.173872] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_cal_param.py\n'}
+[52.174156] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_point.py\n'}
+[52.174450] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detected_object.py\n'}
+[52.178282] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_image_head_position.py\n'}
+[52.178488] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_cal_param_s.c\n'}
+[52.178634] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_track_s.c\n'}
+[52.178744] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_line_segments_s.c\n'}
+[52.178919] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_image_head_position_s.c\n'}
+[52.179024] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_line_s.c\n'}
+[52.179136] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_ball.py\n'}
+[52.179505] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/__init__.py\n'}
+[52.179627] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_s.c\n'}
+[52.179733] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detected_object_s.c\n'}
+[52.179871] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_line.py\n'}
+[52.179997] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections.py\n'}
+[52.180100] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_track.py\n'}
+[52.180198] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_result.py\n'}
+[52.180295] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_point_s.c\n'}
+[52.180417] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_line_segments.py\n'}
+[52.257929] (-) TimerEvent: {}
+[52.276284] (vision_interface) StdoutLine: {'line': b"Listing '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface'...\n"}
+[52.276892] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/__init__.py'...\n"}
+[52.277154] (vision_interface) StdoutLine: {'line': b"Listing '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg'...\n"}
+[52.277299] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/__init__.py'...\n"}
+[52.277789] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_ball.py'...\n"}
+[52.277951] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_cal_param.py'...\n"}
+[52.278066] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detected_object.py'...\n"}
+[52.278175] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections.py'...\n"}
+[52.278280] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_track.py'...\n"}
+[52.278381] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_image_head_position.py'...\n"}
+[52.278481] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_line_segments.py'...\n"}
+[52.278582] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_line.py'...\n"}
+[52.278786] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_point.py'...\n"}
+[52.280001] (vision_interface) StdoutLine: {'line': b"Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_result.py'...\n"}
+[52.289045] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[52.289718] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[52.290102] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[52.290678] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[52.290983] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[52.291597] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[52.291870] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_py.so\n'}
+[52.292622] (vision_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_py.so" to ""\n'}
+[52.292844] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectedObject.idl\n'}
+[52.293160] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Detections.idl\n'}
+[52.293591] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/LineSegments.idl\n'}
+[52.293863] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/CalParam.idl\n'}
+[52.294085] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectionsTrack.idl\n'}
+[52.294335] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationPoint.idl\n'}
+[52.294631] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationLine.idl\n'}
+[52.294885] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationResult.idl\n'}
+[52.295174] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/ImageHeadPosition.idl\n'}
+[52.295533] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Ball.idl\n'}
+[52.295807] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectedObject.msg\n'}
+[52.296088] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Detections.msg\n'}
+[52.296327] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/LineSegments.msg\n'}
+[52.296623] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/CalParam.msg\n'}
+[52.296882] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectionsTrack.msg\n'}
+[52.299781] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationPoint.msg\n'}
+[52.300001] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationLine.msg\n'}
+[52.300118] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationResult.msg\n'}
+[52.300291] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/ImageHeadPosition.msg\n'}
+[52.300472] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Ball.msg\n'}
+[52.300584] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/package_run_dependencies/vision_interface\n'}
+[52.300686] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/parent_prefix_path/vision_interface\n'}
+[52.300785] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/ament_prefix_path.sh\n'}
+[52.300907] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/ament_prefix_path.dsv\n'}
+[52.301297] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/path.sh\n'}
+[52.302168] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/path.dsv\n'}
+[52.302637] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.bash\n'}
+[52.306344] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.sh\n'}
+[52.306633] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.zsh\n'}
+[52.306885] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.dsv\n'}
+[52.307154] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/package.dsv\n'}
+[52.307845] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/packages/vision_interface\n'}
+[52.308125] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_cExport.cmake\n'}
+[52.308569] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_cExport-noconfig.cmake\n'}
+[52.308866] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[52.309178] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[52.309935] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_cppExport.cmake\n'}
+[52.310218] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[52.310512] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[52.310799] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cExport.cmake\n'}
+[52.311073] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[52.311386] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cExport.cmake\n'}
+[52.311904] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[52.312112] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[52.312407] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[52.312737] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cppExport.cmake\n'}
+[52.313007] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[52.313349] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_pyExport.cmake\n'}
+[52.313990] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_pyExport-noconfig.cmake\n'}
+[52.314268] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[52.314616] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[52.314876] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[52.315124] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[52.315401] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[52.315928] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[52.316084] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[52.316341] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interfaceConfig.cmake\n'}
+[52.316573] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interfaceConfig-version.cmake\n'}
+[52.316847] (vision_interface) StdoutLine: {'line': b'-- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/package.xml\n'}
+[52.321256] (vision_interface) CommandEnded: {'returncode': 0}
+[52.358257] (-) TimerEvent: {}
+[52.360529] (vision_interface) JobEnded: {'identifier': 'vision_interface', 'rc': 0}
+[52.362132] (-) EventReactorShutdown: {}

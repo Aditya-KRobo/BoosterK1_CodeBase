@@ -1,0 +1,504 @@
+[0.017s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/interface/vision_interface -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface
+[0.127s] -- The C compiler identification is GNU 11.4.0
+[0.213s] -- The CXX compiler identification is GNU 11.4.0
+[0.226s] -- Detecting C compiler ABI info
+[0.355s] -- Detecting C compiler ABI info - done
+[0.365s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.365s] -- Detecting C compile features
+[0.366s] -- Detecting C compile features - done
+[0.373s] -- Detecting CXX compiler ABI info
+[0.524s] -- Detecting CXX compiler ABI info - done
+[0.536s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.536s] -- Detecting CXX compile features
+[0.537s] -- Detecting CXX compile features - done
+[0.547s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.839s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.013s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[1.091s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.099s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.114s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.136s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.163s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.249s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.254s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.404s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.456s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.533s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.551s] -- Looking for pthread.h
+[1.676s] -- Looking for pthread.h - found
+[1.677s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.799s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.801s] -- Found Threads: TRUE  
+[1.904s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.922s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.947s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.612s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[3.453s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.780s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.828s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[3.830s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.882s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[3.882s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.882s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[3.882s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so
+[3.923s] -- Found PythonExtra: .so  
+[4.313s] -- Using numpy include directory: /home/booster/.local/lib/python3.10/site-packages/numpy/core/include
+[4.332s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.371s] -- Added test 'lint_cmake' to check CMake code style
+[4.374s] -- Added test 'xmllint' to check XML markup files
+[4.381s] -- Configuring done
+[4.486s] -- Generating done
+[4.512s] -- Build files have been written to: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface
+[4.537s] Invoked command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/interface/vision_interface -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface
+[4.541s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface -- -j4 -l4
+[4.634s] [  0%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.567s] [  0%] Built target vision_interface__cpp
+[6.615s] [  0%] Built target ament_cmake_python_copy_vision_interface
+[6.633s] [  1%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[8.081s] [  2%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/detected_object__type_support.cpp.o[0m
+[8.851s] [  3%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/detections__type_support.cpp.o[0m
+[9.826s] [  3%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/line_segments__type_support.cpp.o[0m
+[10.683s] [  4%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/cal_param__type_support.cpp.o[0m
+[11.331s] [  5%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/detections_track__type_support.cpp.o[0m
+[12.262s] [  6%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/segmentation_point__type_support.cpp.o[0m
+[12.955s] [  7%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/segmentation_line__type_support.cpp.o[0m
+[13.722s] [  8%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/segmentation_result__type_support.cpp.o[0m
+[14.626s] [  9%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/image_head_position__type_support.cpp.o[0m
+[15.361s] [ 10%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/vision_interface/msg/detail/dds_fastrtps/ball__type_support.cpp.o[0m
+[16.096s] [ 11%] [32m[1mLinking CXX shared library libvision_interface__rosidl_typesupport_fastrtps_cpp.so[0m
+[16.254s] [ 11%] Built target vision_interface__rosidl_typesupport_fastrtps_cpp
+[16.273s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[17.465s] [ 13%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/detected_object__type_support.cpp.o[0m
+[18.203s] [ 14%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/detections__type_support.cpp.o[0m
+[19.100s] [ 15%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/line_segments__type_support.cpp.o[0m
+[19.864s] [ 16%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/cal_param__type_support.cpp.o[0m
+[20.607s] [ 17%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/detections_track__type_support.cpp.o[0m
+[21.480s] [ 18%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/segmentation_point__type_support.cpp.o[0m
+[22.178s] [ 19%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/segmentation_line__type_support.cpp.o[0m
+[22.860s] [ 20%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/segmentation_result__type_support.cpp.o[0m
+[23.750s] [ 21%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/image_head_position__type_support.cpp.o[0m
+[24.516s] [ 22%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/vision_interface/msg/detail/ball__type_support.cpp.o[0m
+[25.240s] [ 23%] [32m[1mLinking CXX shared library libvision_interface__rosidl_typesupport_introspection_cpp.so[0m
+[25.393s] [ 23%] Built target vision_interface__rosidl_typesupport_introspection_cpp
+[25.833s] running egg_info
+[25.834s] creating vision_interface.egg-info
+[25.835s] writing vision_interface.egg-info/PKG-INFO
+[25.835s] writing dependency_links to vision_interface.egg-info/dependency_links.txt
+[25.835s] writing top-level names to vision_interface.egg-info/top_level.txt
+[25.835s] writing manifest file 'vision_interface.egg-info/SOURCES.txt'
+[25.841s] reading manifest file 'vision_interface.egg-info/SOURCES.txt'
+[25.842s] writing manifest file 'vision_interface.egg-info/SOURCES.txt'
+[25.898s] [ 23%] Built target ament_cmake_python_build_vision_interface_egg
+[25.917s] [ 24%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[26.827s] [ 25%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/detected_object__type_support.cpp.o[0m
+[27.349s] [ 26%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/line_segments__type_support.cpp.o[0m
+[27.812s] [ 27%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/cal_param__type_support.cpp.o[0m
+[28.294s] [ 28%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/detections_track__type_support.cpp.o[0m
+[28.758s] [ 29%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/segmentation_point__type_support.cpp.o[0m
+[29.198s] [ 30%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/segmentation_line__type_support.cpp.o[0m
+[29.740s] [ 31%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/segmentation_result__type_support.cpp.o[0m
+[30.268s] [ 32%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/image_head_position__type_support.cpp.o[0m
+[30.750s] [ 33%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/ball__type_support.cpp.o[0m
+[31.269s] [ 34%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/vision_interface/msg/detections__type_support.cpp.o[0m
+[31.802s] [ 35%] [32m[1mLinking CXX shared library libvision_interface__rosidl_typesupport_cpp.so[0m
+[31.876s] [ 35%] Built target vision_interface__rosidl_typesupport_cpp
+[31.896s] [ 36%] [34m[1mGenerating C code for ROS interfaces[0m
+[33.883s] [ 37%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/detected_object__functions.c.o[0m
+[33.979s] [ 38%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/cal_param__functions.c.o[0m
+[34.078s] [ 39%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/detections_track__functions.c.o[0m
+[34.174s] [ 40%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/segmentation_point__functions.c.o[0m
+[34.267s] [ 41%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/segmentation_line__functions.c.o[0m
+[34.361s] [ 42%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/segmentation_result__functions.c.o[0m
+[34.456s] [ 43%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/image_head_position__functions.c.o[0m
+[34.561s] [ 44%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/ball__functions.c.o[0m
+[34.644s] [ 45%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/line_segments__functions.c.o[0m
+[34.732s] [ 46%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_c.dir/rosidl_generator_c/vision_interface/msg/detail/detections__functions.c.o[0m
+[34.832s] [ 47%] [32m[1mLinking C shared library libvision_interface__rosidl_generator_c.so[0m
+[34.903s] [ 47%] Built target vision_interface__rosidl_generator_c
+[34.924s] [ 48%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[36.260s] [ 49%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/detected_object__type_support_c.cpp.o[0m
+[36.858s] [ 50%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/detections__type_support_c.cpp.o[0m
+[37.438s] [ 51%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/line_segments__type_support_c.cpp.o[0m
+[38.096s] [ 52%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/cal_param__type_support_c.cpp.o[0m
+[38.651s] [ 53%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/detections_track__type_support_c.cpp.o[0m
+[39.312s] [ 54%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/segmentation_point__type_support_c.cpp.o[0m
+[39.984s] [ 55%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/segmentation_line__type_support_c.cpp.o[0m
+[40.645s] [ 56%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/segmentation_result__type_support_c.cpp.o[0m
+[41.298s] [ 57%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/image_head_position__type_support_c.cpp.o[0m
+[41.956s] [ 58%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/vision_interface/msg/detail/ball__type_support_c.cpp.o[0m
+[42.536s] [ 59%] [32m[1mLinking CXX shared library libvision_interface__rosidl_typesupport_fastrtps_c.so[0m
+[42.674s] [ 59%] Built target vision_interface__rosidl_typesupport_fastrtps_c
+[42.693s] [ 60%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[43.607s] [ 61%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/detected_object__type_support.cpp.o[0m
+[43.666s] [ 62%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/line_segments__type_support.cpp.o[0m
+[43.723s] [ 63%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/cal_param__type_support.cpp.o[0m
+[43.780s] [ 64%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/detections_track__type_support.cpp.o[0m
+[43.837s] [ 65%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/segmentation_point__type_support.cpp.o[0m
+[43.894s] [ 66%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/segmentation_line__type_support.cpp.o[0m
+[43.947s] [ 67%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/segmentation_result__type_support.cpp.o[0m
+[44.002s] [ 67%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/image_head_position__type_support.cpp.o[0m
+[44.058s] [ 68%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/ball__type_support.cpp.o[0m
+[44.111s] [ 69%] [32mBuilding CXX object CMakeFiles/vision_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/vision_interface/msg/detections__type_support.cpp.o[0m
+[44.165s] [ 70%] [32m[1mLinking CXX shared library libvision_interface__rosidl_typesupport_c.so[0m
+[44.236s] [ 70%] Built target vision_interface__rosidl_typesupport_c
+[44.258s] [ 71%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[45.529s] [ 72%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/detected_object__type_support.c.o[0m
+[45.620s] [ 73%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/cal_param__type_support.c.o[0m
+[45.682s] [ 74%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/detections_track__type_support.c.o[0m
+[45.766s] [ 75%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/segmentation_point__type_support.c.o[0m
+[45.828s] [ 76%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/segmentation_line__type_support.c.o[0m
+[45.892s] [ 77%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/segmentation_result__type_support.c.o[0m
+[45.975s] [ 78%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/image_head_position__type_support.c.o[0m
+[46.048s] [ 79%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/ball__type_support.c.o[0m
+[46.109s] [ 80%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/line_segments__type_support.c.o[0m
+[46.181s] [ 81%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/vision_interface/msg/detail/detections__type_support.c.o[0m
+[46.273s] [ 82%] [32m[1mLinking C shared library libvision_interface__rosidl_typesupport_introspection_c.so[0m
+[46.336s] [ 82%] Built target vision_interface__rosidl_typesupport_introspection_c
+[46.373s] [ 82%] Built target vision_interface
+[46.413s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[48.883s] [ 83%] Built target vision_interface__py
+[48.924s] [ 84%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_detected_object_s.c.o[0m
+[49.186s] [ 85%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_cal_param_s.c.o[0m
+[49.379s] [ 86%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_detections_track_s.c.o[0m
+[49.596s] [ 87%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_segmentation_point_s.c.o[0m
+[49.796s] [ 88%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_segmentation_line_s.c.o[0m
+[49.974s] [ 89%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_segmentation_result_s.c.o[0m
+[50.151s] [ 90%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_image_head_position_s.c.o[0m
+[50.337s] [ 91%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_ball_s.c.o[0m
+[50.533s] [ 92%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_line_segments_s.c.o[0m
+[50.748s] [ 93%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_generator_py.dir/rosidl_generator_py/vision_interface/msg/_detections_s.c.o[0m
+[50.962s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/vision_interface/libvision_interface__rosidl_generator_py.so[0m
+[51.040s] [ 94%] Built target vision_interface__rosidl_generator_py
+[51.076s] [ 95%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/vision_interface/_vision_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[51.301s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so[0m
+[51.378s] [ 96%] Built target vision_interface__rosidl_typesupport_fastrtps_c__pyext
+[51.412s] [ 97%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/vision_interface/_vision_interface_s.ep.rosidl_typesupport_c.c.o[0m
+[51.637s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so[0m
+[51.720s] [ 98%] Built target vision_interface__rosidl_typesupport_c__pyext
+[51.756s] [ 99%] [32mBuilding C object CMakeFiles/vision_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/vision_interface/_vision_interface_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[51.979s] [100%] [32m[1mLinking C shared library rosidl_generator_py/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so[0m
+[52.051s] [100%] Built target vision_interface__rosidl_typesupport_introspection_c__pyext
+[52.076s] Invoked command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface -- -j4 -l4
+[52.097s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface
+[52.114s] -- Install configuration: ""
+[52.115s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/rosidl_interfaces/vision_interface
+[52.115s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface
+[52.115s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg
+[52.116s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections.h
+[52.116s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections_track.h
+[52.116s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detected_object.h
+[52.116s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_result.h
+[52.117s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_generator_c__visibility_control.h
+[52.117s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_line.h
+[52.117s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/line_segments.h
+[52.117s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/cal_param.h
+[52.117s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_point.h
+[52.118s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/image_head_position.h
+[52.118s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/ball.h
+[52.118s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail
+[52.118s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__functions.c
+[52.118s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__struct.h
+[52.119s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__functions.h
+[52.119s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__functions.c
+[52.119s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__functions.h
+[52.120s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__struct.h
+[52.120s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__functions.c
+[52.120s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__struct.h
+[52.122s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__functions.h
+[52.123s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__functions.h
+[52.123s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__functions.c
+[52.123s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__functions.c
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.h
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__functions.h
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__functions.h
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__struct.h
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__functions.h
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.h
+[52.124s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__functions.h
+[52.125s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__functions.h
+[52.126s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.h
+[52.126s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__struct.h
+[52.126s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__functions.c
+[52.126s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__struct.h
+[52.126s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__functions.c
+[52.127s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.h
+[52.127s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__functions.c
+[52.127s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__struct.h
+[52.127s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.h
+[52.127s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__struct.h
+[52.127s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__struct.h
+[52.128s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.h
+[52.128s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.h
+[52.128s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__struct.h
+[52.128s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__functions.h
+[52.128s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__functions.c
+[52.128s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__functions.c
+[52.129s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.h
+[52.129s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.h
+[52.129s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.h
+[52.129s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/library_path.sh
+[52.129s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/library_path.dsv
+[52.129s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_c.so
+[52.129s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_c.so" to ""
+[52.130s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface
+[52.130s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg
+[52.130s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[52.130s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail
+[52.130s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_fastrtps_c.h
+[52.131s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_fastrtps_c.h
+[52.131s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_fastrtps_c.h
+[52.131s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_fastrtps_c.h
+[52.131s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_fastrtps_c.h
+[52.131s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_fastrtps_c.h
+[52.131s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_fastrtps_c.h
+[52.132s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_fastrtps_c.h
+[52.132s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_fastrtps_c.h
+[52.132s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_fastrtps_c.h
+[52.132s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_c.so
+[52.133s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_c.so" to ""
+[52.133s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface
+[52.134s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg
+[52.134s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/ball.hpp
+[52.134s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections.hpp
+[52.134s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/cal_param.hpp
+[52.134s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/image_head_position.hpp
+[52.134s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/line_segments.hpp
+[52.135s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[52.135s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_result.hpp
+[52.135s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_line.hpp
+[52.136s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detections_track.hpp
+[52.136s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detected_object.hpp
+[52.136s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail
+[52.137s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__traits.hpp
+[52.137s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__struct.hpp
+[52.137s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__builder.hpp
+[52.137s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__struct.hpp
+[52.138s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__traits.hpp
+[52.138s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__struct.hpp
+[52.138s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__struct.hpp
+[52.139s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.hpp
+[52.139s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__builder.hpp
+[52.139s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.hpp
+[52.140s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.hpp
+[52.140s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__struct.hpp
+[52.140s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__struct.hpp
+[52.140s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__traits.hpp
+[52.141s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__traits.hpp
+[52.144s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__builder.hpp
+[52.144s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__builder.hpp
+[52.145s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__builder.hpp
+[52.145s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__builder.hpp
+[52.145s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.hpp
+[52.145s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__builder.hpp
+[52.145s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__struct.hpp
+[52.145s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__struct.hpp
+[52.146s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.hpp
+[52.146s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.hpp
+[52.146s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__builder.hpp
+[52.146s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.hpp
+[52.146s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__struct.hpp
+[52.146s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__traits.hpp
+[52.147s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__struct.hpp
+[52.147s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__traits.hpp
+[52.147s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__builder.hpp
+[52.147s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.hpp
+[52.147s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__traits.hpp
+[52.147s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__builder.hpp
+[52.148s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.hpp
+[52.148s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.hpp
+[52.148s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__traits.hpp
+[52.149s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__traits.hpp
+[52.149s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__traits.hpp
+[52.149s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/segmentation_point.hpp
+[52.149s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface
+[52.149s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg
+[52.149s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[52.150s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/dds_fastrtps
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_fastrtps_cpp.hpp
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_fastrtps_cpp.hpp
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_fastrtps_cpp.hpp
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_fastrtps_cpp.hpp
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_fastrtps_cpp.hpp
+[52.150s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_fastrtps_cpp.hpp
+[52.151s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_fastrtps_cpp.hpp
+[52.151s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_fastrtps_cpp.hpp
+[52.151s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_fastrtps_cpp.hpp
+[52.151s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_fastrtps_cpp.hpp
+[52.151s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_cpp.so
+[52.151s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_fastrtps_cpp.so" to ""
+[52.152s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface
+[52.152s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg
+[52.152s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[52.152s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail
+[52.152s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_introspection_c.h
+[52.152s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.c
+[52.153s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.c
+[52.155s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.c
+[52.156s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_introspection_c.h
+[52.156s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_introspection_c.h
+[52.156s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_introspection_c.h
+[52.156s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.c
+[52.156s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.c
+[52.156s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_introspection_c.h
+[52.157s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_introspection_c.h
+[52.157s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_introspection_c.h
+[52.157s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.c
+[52.157s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.c
+[52.157s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.c
+[52.157s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_introspection_c.h
+[52.158s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.c
+[52.158s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.c
+[52.159s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_introspection_c.h
+[52.159s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_introspection_c.h
+[52.159s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_c.so
+[52.159s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_c.so" to ""
+[52.160s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_c.so
+[52.160s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_c.so" to ""
+[52.160s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface
+[52.160s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg
+[52.160s] -- Up-to-date: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail
+[52.160s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__rosidl_typesupport_introspection_cpp.hpp
+[52.161s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__type_support.cpp
+[52.161s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__rosidl_typesupport_introspection_cpp.hpp
+[52.161s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__type_support.cpp
+[52.161s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/ball__type_support.cpp
+[52.161s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__type_support.cpp
+[52.161s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__type_support.cpp
+[52.162s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_line__rosidl_typesupport_introspection_cpp.hpp
+[52.162s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_point__type_support.cpp
+[52.162s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__type_support.cpp
+[52.162s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections__rosidl_typesupport_introspection_cpp.hpp
+[52.162s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__type_support.cpp
+[52.162s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/cal_param__rosidl_typesupport_introspection_cpp.hpp
+[52.163s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__type_support.cpp
+[52.163s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/segmentation_result__rosidl_typesupport_introspection_cpp.hpp
+[52.163s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/image_head_position__rosidl_typesupport_introspection_cpp.hpp
+[52.163s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detected_object__rosidl_typesupport_introspection_cpp.hpp
+[52.163s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/detections_track__rosidl_typesupport_introspection_cpp.hpp
+[52.164s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__rosidl_typesupport_introspection_cpp.hpp
+[52.164s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/include/vision_interface/vision_interface/msg/detail/line_segments__type_support.cpp
+[52.164s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_cpp.so
+[52.165s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_introspection_cpp.so" to ""
+[52.165s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_cpp.so
+[52.166s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_typesupport_cpp.so" to ""
+[52.166s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/pythonpath.sh
+[52.166s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/pythonpath.dsv
+[52.167s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info
+[52.167s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/PKG-INFO
+[52.167s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/dependency_links.txt
+[52.167s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/SOURCES.txt
+[52.168s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface-1.0.0-py3.10.egg-info/top_level.txt
+[52.168s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface
+[52.168s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/libvision_interface__rosidl_generator_py.so
+[52.168s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/_vision_interface_s.ep.rosidl_typesupport_introspection_c.c
+[52.169s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[52.169s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[52.169s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/__init__.py
+[52.170s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[52.170s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/_vision_interface_s.ep.rosidl_typesupport_c.c
+[52.171s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/_vision_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[52.172s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg
+[52.172s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_ball_s.c
+[52.172s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_result_s.c
+[52.172s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_cal_param.py
+[52.172s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_point.py
+[52.173s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detected_object.py
+[52.177s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_image_head_position.py
+[52.177s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_cal_param_s.c
+[52.177s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_track_s.c
+[52.177s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_line_segments_s.c
+[52.177s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_image_head_position_s.c
+[52.177s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_line_s.c
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_ball.py
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/__init__.py
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_s.c
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detected_object_s.c
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_line.py
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections.py
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_track.py
+[52.178s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_result.py
+[52.179s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_point_s.c
+[52.179s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_line_segments.py
+[52.275s] Listing '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface'...
+[52.275s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/__init__.py'...
+[52.275s] Listing '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg'...
+[52.276s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/__init__.py'...
+[52.276s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_ball.py'...
+[52.276s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_cal_param.py'...
+[52.276s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detected_object.py'...
+[52.276s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections.py'...
+[52.277s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_detections_track.py'...
+[52.277s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_image_head_position.py'...
+[52.277s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_line_segments.py'...
+[52.277s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_line.py'...
+[52.278s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_point.py'...
+[52.278s] Compiling '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/msg/_segmentation_result.py'...
+[52.288s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[52.288s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""
+[52.288s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[52.289s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""
+[52.289s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[52.290s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/local/lib/python3.10/dist-packages/vision_interface/vision_interface_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""
+[52.290s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_py.so
+[52.291s] -- Set runtime path of "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/lib/libvision_interface__rosidl_generator_py.so" to ""
+[52.291s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectedObject.idl
+[52.291s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Detections.idl
+[52.292s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/LineSegments.idl
+[52.292s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/CalParam.idl
+[52.292s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectionsTrack.idl
+[52.293s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationPoint.idl
+[52.293s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationLine.idl
+[52.293s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationResult.idl
+[52.293s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/ImageHeadPosition.idl
+[52.294s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Ball.idl
+[52.294s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectedObject.msg
+[52.294s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Detections.msg
+[52.295s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/LineSegments.msg
+[52.295s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/CalParam.msg
+[52.295s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/DetectionsTrack.msg
+[52.298s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationPoint.msg
+[52.298s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationLine.msg
+[52.298s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/SegmentationResult.msg
+[52.299s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/ImageHeadPosition.msg
+[52.299s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/msg/Ball.msg
+[52.299s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/package_run_dependencies/vision_interface
+[52.299s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/parent_prefix_path/vision_interface
+[52.299s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/ament_prefix_path.sh
+[52.299s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/ament_prefix_path.dsv
+[52.300s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/path.sh
+[52.301s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/environment/path.dsv
+[52.301s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.bash
+[52.305s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.sh
+[52.305s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.zsh
+[52.305s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/local_setup.dsv
+[52.305s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/package.dsv
+[52.306s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/ament_index/resource_index/packages/vision_interface
+[52.306s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_cExport.cmake
+[52.307s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_cExport-noconfig.cmake
+[52.307s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[52.307s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[52.308s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_cppExport.cmake
+[52.309s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[52.309s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[52.309s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cExport.cmake
+[52.309s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[52.310s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cExport.cmake
+[52.310s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cExport-noconfig.cmake
+[52.310s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cppExport.cmake
+[52.311s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[52.311s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cppExport.cmake
+[52.311s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[52.312s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_pyExport.cmake
+[52.312s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/export_vision_interface__rosidl_generator_pyExport-noconfig.cmake
+[52.313s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/rosidl_cmake-extras.cmake
+[52.313s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[52.313s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[52.313s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[52.314s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/ament_cmake_export_targets-extras.cmake
+[52.314s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[52.314s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[52.315s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interfaceConfig.cmake
+[52.315s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/cmake/vision_interfaceConfig-version.cmake
+[52.315s] -- Installing: /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/vision_interface/share/vision_interface/package.xml
+[52.320s] Invoked command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface
