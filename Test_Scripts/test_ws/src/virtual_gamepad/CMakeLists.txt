@@ -8,7 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(booster_msgs REQUIRED)
+#find_package(booster_msgs REQUIRED)
 find_package(booster_interface REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
@@ -17,7 +17,7 @@ find_package(backward_ros REQUIRED)
 
 
 add_executable(virtual_gamepad_node src/virtual_gamepad.cpp)
-ament_target_dependencies(virtual_gamepad_node rclcpp rosidl_typesupport_cpp geometry_msgs std_msgs booster_msgs booster_interface)
+ament_target_dependencies(virtual_gamepad_node rclcpp rosidl_typesupport_cpp geometry_msgs std_msgs booster_interface)
 install(TARGETS virtual_gamepad_node DESTINATION lib/${PROJECT_NAME})
 
 # install launch files
