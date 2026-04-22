@@ -1,0 +1,34 @@
+[0.021s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/virtual_gamepad': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/virtual_gamepad -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/virtual_gamepad
+[0.042s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.298s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.312s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.361s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.365s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.376s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.391s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.412s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.471s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.473s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.660s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.746s] -- Found booster_msgs: 0.0.0 (/opt/booster/BoosterRos2/install/booster_msgs/share/booster_msgs/cmake)
+[0.761s] -- Found booster_interface: 0.0.0 (/opt/booster/BoosterRos2Interface/install/booster_interface/share/booster_interface/cmake)
+[0.795s] [31mCMake Error at CMakeLists.txt:13 (find_package):
+[0.796s]   By not providing "Findgame_controller_interface.cmake" in CMAKE_MODULE_PATH
+[0.796s]   this project has asked CMake to find a package configuration file provided
+[0.796s]   by "game_controller_interface", but CMake did not find one.
+[0.796s] 
+[0.796s]   Could not find a package configuration file provided by
+[0.796s]   "game_controller_interface" with any of the following names:
+[0.796s] 
+[0.796s]     game_controller_interfaceConfig.cmake
+[0.796s]     game_controller_interface-config.cmake
+[0.797s] 
+[0.797s]   Add the installation prefix of "game_controller_interface" to
+[0.797s]   CMAKE_PREFIX_PATH or set "game_controller_interface_DIR" to a directory
+[0.797s]   containing one of the above files.  If "game_controller_interface" provides
+[0.797s]   a separate development package or SDK, be sure it has been installed.
+[0.797s] 
+[0.797s] [0m
+[0.797s] -- Configuring incomplete, errors occurred!
+[0.797s] See also "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/virtual_gamepad/CMakeFiles/CMakeOutput.log".
+[0.813s] Invoked command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/virtual_gamepad' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/virtual_gamepad -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/virtual_gamepad

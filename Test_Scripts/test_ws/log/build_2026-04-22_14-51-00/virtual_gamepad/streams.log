@@ -1,0 +1,47 @@
+[0.019s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/virtual_gamepad': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/virtual_gamepad -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/virtual_gamepad
+[0.042s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.258s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.270s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.324s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.328s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.339s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.355s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.376s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.432s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.434s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.626s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.703s] -- Found booster_msgs: 0.0.0 (/opt/booster/BoosterRos2/install/booster_msgs/share/booster_msgs/cmake)
+[0.718s] -- Found booster_interface: 0.0.0 (/opt/booster/BoosterRos2Interface/install/booster_interface/share/booster_interface/cmake)
+[0.734s] -- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.753s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.772s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.902s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.902s] -- Configured cppcheck include dirs: 
+[0.902s] -- Configured cppcheck exclude dirs and/or files: 
+[0.903s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.904s] -- Added test 'lint_cmake' to check CMake code style
+[0.904s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.907s] -- Added test 'uncrustify' to check C / C++ code style
+[0.907s] -- Configured uncrustify additional arguments: 
+[0.908s] -- Added test 'xmllint' to check XML markup files
+[0.909s] -- Configuring done
+[0.926s] [31mCMake Error in CMakeLists.txt:
+[0.926s]   Imported target "booster_msgs::booster_msgs__rosidl_generator_py" includes
+[0.926s]   non-existent path
+[0.926s] 
+[0.927s]     "/home/booster/python-v-env/lib/python3.10/site-packages/numpy/core/include"
+[0.927s] 
+[0.927s]   in its INTERFACE_INCLUDE_DIRECTORIES.  Possible reasons include:
+[0.928s] 
+[0.928s]   * The path was deleted, renamed, or moved to another location.
+[0.928s] 
+[0.928s]   * An install or uninstall procedure did not complete successfully.
+[0.928s] 
+[0.928s]   * The installation package was faulty and references files it does not
+[0.929s]   provide.
+[0.929s] 
+[0.929s] 
+[0.929s] [0m
+[0.934s] -- Generating done
+[0.937s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[0.956s] Invoked command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/virtual_gamepad' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/virtual_gamepad -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/virtual_gamepad

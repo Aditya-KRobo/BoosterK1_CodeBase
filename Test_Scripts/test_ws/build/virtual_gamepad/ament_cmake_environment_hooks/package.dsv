@@ -1,0 +1,4 @@
+source;share/virtual_gamepad/local_setup.bash
+source;share/virtual_gamepad/local_setup.dsv
+source;share/virtual_gamepad/local_setup.sh
+source;share/virtual_gamepad/local_setup.zsh

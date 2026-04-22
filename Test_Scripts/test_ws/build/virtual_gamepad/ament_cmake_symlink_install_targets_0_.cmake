@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/virtual_gamepad/virtual_gamepad_node" "TARGETS" "virtual_gamepad_node" "DESTINATION" "lib/virtual_gamepad")

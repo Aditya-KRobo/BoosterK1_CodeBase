@@ -1,0 +1,1 @@
+Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/booster_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/src/interface/booster_msgs -DCMAKE_INSTALL_PREFIX=/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/install/booster_msgs
