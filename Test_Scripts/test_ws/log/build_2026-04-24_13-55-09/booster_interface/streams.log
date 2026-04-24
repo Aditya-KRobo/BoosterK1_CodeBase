@@ -1,0 +1,34 @@
+[0.058s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/booster_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/booster_interface -- -j4 -l4
+[0.245s] [  0%] Built target booster_interface__cpp
+[0.377s] [  0%] Built target ament_cmake_python_copy_booster_interface
+[0.428s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_fastrtps_cpp[0m
+[0.530s] [ 12%] Built target booster_interface__rosidl_typesupport_fastrtps_cpp
+[0.578s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_introspection_cpp[0m
+[0.658s] [ 24%] Built target booster_interface__rosidl_typesupport_introspection_cpp
+[1.799s] running egg_info
+[1.803s] writing booster_interface.egg-info/PKG-INFO
+[1.804s] writing dependency_links to booster_interface.egg-info/dependency_links.txt
+[1.806s] writing top-level names to booster_interface.egg-info/top_level.txt
+[1.820s] reading manifest file 'booster_interface.egg-info/SOURCES.txt'
+[1.823s] writing manifest file 'booster_interface.egg-info/SOURCES.txt'
+[1.948s] [ 24%] Built target ament_cmake_python_build_booster_interface_egg
+[2.034s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_cpp[0m
+[2.101s] [ 36%] Built target booster_interface__rosidl_typesupport_cpp
+[2.144s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_generator_c[0m
+[2.191s] [ 48%] Built target booster_interface__rosidl_generator_c
+[2.232s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_fastrtps_c[0m
+[2.290s] [ 60%] Built target booster_interface__rosidl_typesupport_fastrtps_c
+[2.334s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_c[0m
+[2.374s] [ 72%] Built target booster_interface__rosidl_typesupport_c
+[2.424s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_introspection_c[0m
+[2.469s] [ 84%] Built target booster_interface__rosidl_typesupport_introspection_c
+[2.527s] [ 84%] Built target booster_interface
+[2.578s] [ 85%] Built target booster_interface__py
+[2.614s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_generator_py[0m
+[2.677s] [ 96%] Built target booster_interface__rosidl_generator_py
+[2.698s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.723s] [ 97%] Built target booster_interface__rosidl_typesupport_fastrtps_c__pyext
+[2.748s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_c__pyext[0m
+[2.777s] [ 98%] Built target booster_interface__rosidl_typesupport_c__pyext
+[2.803s] [35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_introspection_c__pyext[0m
+[2.832s] [100%] Built target booster_interface__rosidl_typesupport_introspection_c__pyext

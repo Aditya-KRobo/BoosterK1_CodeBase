@@ -111,6 +111,13 @@ virtual_gamepad_node: /opt/booster/BoosterRos2Interface/install/booster_interfac
 virtual_gamepad_node: /opt/booster/BoosterRos2Interface/install/booster_interface/lib/libbooster_interface__rosidl_typesupport_introspection_cpp.so
 virtual_gamepad_node: /opt/booster/BoosterRos2Interface/install/booster_interface/lib/libbooster_interface__rosidl_typesupport_cpp.so
 virtual_gamepad_node: /opt/booster/BoosterRos2Interface/install/booster_interface/lib/libbooster_interface__rosidl_generator_py.so
+virtual_gamepad_node: /opt/ros/humble/lib/librcutils.so
+virtual_gamepad_node: /opt/ros/humble/lib/librcpputils.so
+virtual_gamepad_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
+virtual_gamepad_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
+virtual_gamepad_node: /opt/ros/humble/lib/librosidl_runtime_c.so
+virtual_gamepad_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so
+virtual_gamepad_node: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 virtual_gamepad_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 virtual_gamepad_node: /opt/ros/humble/lib/librcl.so
 virtual_gamepad_node: /opt/ros/humble/lib/librmw_implementation.so
@@ -166,8 +173,8 @@ virtual_gamepad_node: /opt/ros/humble/lib/librosidl_typesupport_cpp.so
 virtual_gamepad_node: /opt/booster/BoosterRos2Interface/install/booster_interface/lib/libbooster_interface__rosidl_typesupport_c.so
 virtual_gamepad_node: /opt/booster/BoosterRos2Interface/install/booster_interface/lib/libbooster_interface__rosidl_generator_c.so
 virtual_gamepad_node: /opt/ros/humble/lib/librosidl_typesupport_c.so
-virtual_gamepad_node: /opt/ros/humble/lib/librcpputils.so
 virtual_gamepad_node: /opt/ros/humble/lib/librosidl_runtime_c.so
+virtual_gamepad_node: /opt/ros/humble/lib/librcpputils.so
 virtual_gamepad_node: /opt/ros/humble/lib/librcutils.so
 virtual_gamepad_node: /usr/lib/aarch64-linux-gnu/libpython3.10.so
 virtual_gamepad_node: CMakeFiles/virtual_gamepad_node.dir/link.txt

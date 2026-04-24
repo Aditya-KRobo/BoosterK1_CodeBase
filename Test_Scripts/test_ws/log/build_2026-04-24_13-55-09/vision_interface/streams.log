@@ -1,0 +1,34 @@
+[0.073s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface -- -j4 -l4
+[0.236s] [  0%] Built target vision_interface__cpp
+[0.371s] [  0%] Built target ament_cmake_python_copy_vision_interface
+[0.410s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_fastrtps_cpp[0m
+[0.475s] [ 11%] Built target vision_interface__rosidl_typesupport_fastrtps_cpp
+[0.541s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_introspection_cpp[0m
+[0.639s] [ 23%] Built target vision_interface__rosidl_typesupport_introspection_cpp
+[1.535s] running egg_info
+[1.537s] writing vision_interface.egg-info/PKG-INFO
+[1.538s] writing dependency_links to vision_interface.egg-info/dependency_links.txt
+[1.539s] writing top-level names to vision_interface.egg-info/top_level.txt
+[1.545s] reading manifest file 'vision_interface.egg-info/SOURCES.txt'
+[1.547s] writing manifest file 'vision_interface.egg-info/SOURCES.txt'
+[1.647s] [ 23%] Built target ament_cmake_python_build_vision_interface_egg
+[1.700s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_cpp[0m
+[1.777s] [ 35%] Built target vision_interface__rosidl_typesupport_cpp
+[1.806s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_generator_c[0m
+[1.873s] [ 47%] Built target vision_interface__rosidl_generator_c
+[1.933s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_fastrtps_c[0m
+[2.026s] [ 59%] Built target vision_interface__rosidl_typesupport_fastrtps_c
+[2.076s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_c[0m
+[2.107s] [ 70%] Built target vision_interface__rosidl_typesupport_c
+[2.141s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_introspection_c[0m
+[2.181s] [ 82%] Built target vision_interface__rosidl_typesupport_introspection_c
+[2.235s] [ 82%] Built target vision_interface
+[2.292s] [ 83%] Built target vision_interface__py
+[2.340s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_generator_py[0m
+[2.421s] [ 94%] Built target vision_interface__rosidl_generator_py
+[2.452s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.480s] [ 96%] Built target vision_interface__rosidl_typesupport_fastrtps_c__pyext
+[2.505s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_c__pyext[0m
+[2.542s] [ 98%] Built target vision_interface__rosidl_typesupport_c__pyext
+[2.574s] [35m[1mConsolidate compiler generated dependencies of target vision_interface__rosidl_typesupport_introspection_c__pyext[0m
+[2.611s] [100%] Built target vision_interface__rosidl_typesupport_introspection_c__pyext

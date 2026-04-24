@@ -1,0 +1,23 @@
+[0.046s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/vision_interface -- -j4 -l4
+[0.186s] [  0%] Built target vision_interface__cpp
+[0.322s] [  0%] Built target ament_cmake_python_copy_vision_interface
+[0.429s] [ 11%] Built target vision_interface__rosidl_typesupport_fastrtps_cpp
+[0.496s] [ 23%] Built target vision_interface__rosidl_typesupport_introspection_cpp
+[1.271s] running egg_info
+[1.276s] writing vision_interface.egg-info/PKG-INFO
+[1.277s] writing dependency_links to vision_interface.egg-info/dependency_links.txt
+[1.278s] writing top-level names to vision_interface.egg-info/top_level.txt
+[1.287s] reading manifest file 'vision_interface.egg-info/SOURCES.txt'
+[1.289s] writing manifest file 'vision_interface.egg-info/SOURCES.txt'
+[1.374s] [ 23%] Built target ament_cmake_python_build_vision_interface_egg
+[1.431s] [ 35%] Built target vision_interface__rosidl_typesupport_cpp
+[1.484s] [ 47%] Built target vision_interface__rosidl_generator_c
+[1.557s] [ 59%] Built target vision_interface__rosidl_typesupport_fastrtps_c
+[1.611s] [ 70%] Built target vision_interface__rosidl_typesupport_c
+[1.694s] [ 82%] Built target vision_interface__rosidl_typesupport_introspection_c
+[1.742s] [ 82%] Built target vision_interface
+[1.790s] [ 83%] Built target vision_interface__py
+[1.849s] [ 94%] Built target vision_interface__rosidl_generator_py
+[1.894s] [ 96%] Built target vision_interface__rosidl_typesupport_fastrtps_c__pyext
+[1.944s] [ 98%] Built target vision_interface__rosidl_typesupport_c__pyext
+[1.991s] [100%] Built target vision_interface__rosidl_typesupport_introspection_c__pyext

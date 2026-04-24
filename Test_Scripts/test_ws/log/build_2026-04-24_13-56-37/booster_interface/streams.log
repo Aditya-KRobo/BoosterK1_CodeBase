@@ -1,0 +1,23 @@
+[0.049s] Invoking command in '/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/booster_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/test_ws/build/booster_interface -- -j4 -l4
+[0.282s] [  0%] Built target booster_interface__cpp
+[0.400s] [  0%] Built target ament_cmake_python_copy_booster_interface
+[0.500s] [ 12%] Built target booster_interface__rosidl_typesupport_fastrtps_cpp
+[0.632s] [ 24%] Built target booster_interface__rosidl_typesupport_introspection_cpp
+[1.438s] running egg_info
+[1.440s] writing booster_interface.egg-info/PKG-INFO
+[1.441s] writing dependency_links to booster_interface.egg-info/dependency_links.txt
+[1.442s] writing top-level names to booster_interface.egg-info/top_level.txt
+[1.449s] reading manifest file 'booster_interface.egg-info/SOURCES.txt'
+[1.452s] writing manifest file 'booster_interface.egg-info/SOURCES.txt'
+[1.559s] [ 24%] Built target ament_cmake_python_build_booster_interface_egg
+[1.630s] [ 36%] Built target booster_interface__rosidl_typesupport_cpp
+[1.691s] [ 48%] Built target booster_interface__rosidl_generator_c
+[1.767s] [ 60%] Built target booster_interface__rosidl_typesupport_fastrtps_c
+[1.829s] [ 72%] Built target booster_interface__rosidl_typesupport_c
+[1.895s] [ 84%] Built target booster_interface__rosidl_typesupport_introspection_c
+[1.948s] [ 84%] Built target booster_interface
+[2.061s] [ 85%] Built target booster_interface__py
+[2.123s] [ 96%] Built target booster_interface__rosidl_generator_py
+[2.174s] [ 97%] Built target booster_interface__rosidl_typesupport_fastrtps_c__pyext
+[2.218s] [ 98%] Built target booster_interface__rosidl_typesupport_c__pyext
+[2.265s] [100%] Built target booster_interface__rosidl_typesupport_introspection_c__pyext

@@ -1,0 +1,33 @@
+[  0%] Built target booster_interface__cpp
+[  0%] Built target ament_cmake_python_copy_booster_interface
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_fastrtps_cpp[0m
+[ 12%] Built target booster_interface__rosidl_typesupport_fastrtps_cpp
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_introspection_cpp[0m
+[ 24%] Built target booster_interface__rosidl_typesupport_introspection_cpp
+running egg_info
+writing booster_interface.egg-info/PKG-INFO
+writing dependency_links to booster_interface.egg-info/dependency_links.txt
+writing top-level names to booster_interface.egg-info/top_level.txt
+reading manifest file 'booster_interface.egg-info/SOURCES.txt'
+writing manifest file 'booster_interface.egg-info/SOURCES.txt'
+[ 24%] Built target ament_cmake_python_build_booster_interface_egg
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_cpp[0m
+[ 36%] Built target booster_interface__rosidl_typesupport_cpp
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_generator_c[0m
+[ 48%] Built target booster_interface__rosidl_generator_c
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_fastrtps_c[0m
+[ 60%] Built target booster_interface__rosidl_typesupport_fastrtps_c
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_c[0m
+[ 72%] Built target booster_interface__rosidl_typesupport_c
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_introspection_c[0m
+[ 84%] Built target booster_interface__rosidl_typesupport_introspection_c
+[ 84%] Built target booster_interface
+[ 85%] Built target booster_interface__py
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_generator_py[0m
+[ 96%] Built target booster_interface__rosidl_generator_py
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 97%] Built target booster_interface__rosidl_typesupport_fastrtps_c__pyext
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_c__pyext[0m
+[ 98%] Built target booster_interface__rosidl_typesupport_c__pyext
+[35m[1mConsolidate compiler generated dependencies of target booster_interface__rosidl_typesupport_introspection_c__pyext[0m
+[100%] Built target booster_interface__rosidl_typesupport_introspection_c__pyext

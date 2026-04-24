@@ -1,0 +1,22 @@
+[  0%] Built target vision_interface__cpp
+[  0%] Built target ament_cmake_python_copy_vision_interface
+[ 11%] Built target vision_interface__rosidl_typesupport_fastrtps_cpp
+[ 23%] Built target vision_interface__rosidl_typesupport_introspection_cpp
+running egg_info
+writing vision_interface.egg-info/PKG-INFO
+writing dependency_links to vision_interface.egg-info/dependency_links.txt
+writing top-level names to vision_interface.egg-info/top_level.txt
+reading manifest file 'vision_interface.egg-info/SOURCES.txt'
+writing manifest file 'vision_interface.egg-info/SOURCES.txt'
+[ 23%] Built target ament_cmake_python_build_vision_interface_egg
+[ 35%] Built target vision_interface__rosidl_typesupport_cpp
+[ 47%] Built target vision_interface__rosidl_generator_c
+[ 59%] Built target vision_interface__rosidl_typesupport_fastrtps_c
+[ 70%] Built target vision_interface__rosidl_typesupport_c
+[ 82%] Built target vision_interface__rosidl_typesupport_introspection_c
+[ 82%] Built target vision_interface
+[ 83%] Built target vision_interface__py
+[ 94%] Built target vision_interface__rosidl_generator_py
+[ 96%] Built target vision_interface__rosidl_typesupport_fastrtps_c__pyext
+[ 98%] Built target vision_interface__rosidl_typesupport_c__pyext
+[100%] Built target vision_interface__rosidl_typesupport_introspection_c__pyext
