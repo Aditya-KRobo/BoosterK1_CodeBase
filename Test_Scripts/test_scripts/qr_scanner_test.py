@@ -27,7 +27,7 @@ class QRSubscriber(Node):
 
 
   def qr_listener_callback(self, msg):
-    self.get_logger().info('Receiving color image')
+    # self.get_logger().info('Receiving color image')
     yuv = np.frombuffer(msg.data, dtype=np.uint8).reshape((msg.height * 3 // 2, msg.width))
     self.bgr_image = cv2.cvtColor(yuv, cv2.COLOR_YUV2BGR_NV12)
     self.hsv_image = cv2.cvtColor(self.bgr_image, cv2.COLOR_BGR2HSV)
