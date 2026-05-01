@@ -1,5 +1,5 @@
 import qrcode
 
-data = "Dragon"
+data = "Crocodile"
 img = qrcode.make(data)
-img.save("~Workspace/BoosterK1_CodeBase/Test_Scripts/res/dragon.png")
+img.save("/home/booster/Workspace/BoosterK1_CodeBase/Test_Scripts/res/qrcodes/Crocodile.png")
