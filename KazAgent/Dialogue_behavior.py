@@ -54,6 +54,7 @@ def Dialogue_behavior():
             if Button_values[But_Plu] == 1 and not audio_lock:
                 pygame.mixer.music.load(Audio_files[audio_flag])
                 audio_lock = True
+                Button_values[But_Plu] = 0
 
                 pygame.mixer.music.set_volume(1.0)
 

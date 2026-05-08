@@ -125,7 +125,7 @@ def main():
             print("Requested Dialogue")
             Busy_flag = 1
             # Execute dialogue behavior
-            # DB.Dialogue_behavior()
+            DB.Dialogue_behavior()
 
         elif Button_values[But_O] == 1 and Agent_flag == 1 and Busy_flag == 1:
             print("Requested Robot to be put to Idle mode")
