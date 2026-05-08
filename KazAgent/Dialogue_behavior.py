@@ -28,7 +28,7 @@ Button_values = {"BTN_EAST": 0, "BTN_C": 0, "BTN_SOUTH": 0, "BTN_NORTH": 0, "BTN
 def Dialogue_behavior():
     
     audio_lock = False
-    audio_flag = 0
+    audio_flag = -1
     
     # Load audio file paths from JSON
     with open('audio_files.json', 'r') as f:
@@ -75,8 +75,8 @@ def Dialogue_behavior():
                 Button_values[But_Min] = 0
                 try:
                     if audio_flag < audio_count:
-                        pygame.mixer.music.load(Audio_files[audio_flag])
                         audio_flag += 1
+                        pygame.mixer.music.load(Audio_files[audio_flag])
                     elif audio_flag >= audio_count:
                         continue
 
