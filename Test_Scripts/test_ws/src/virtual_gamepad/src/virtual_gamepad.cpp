@@ -18,7 +18,7 @@
 #include <stdexcept>
 
 struct RemoteControllerInput{
-    unint32_t event;
+    uint32_t event;
     float lx;
     float ly;
     float rx;
@@ -45,7 +45,7 @@ struct RemoteControllerInput{
     bool hat_ru;
     bool hat_rd;
     uint8_t hat_pos;
-}
+};
 
 class VirtualGamepadNode : public rclcpp::Node 
 {
@@ -58,7 +58,7 @@ class VirtualGamepadNode : public rclcpp::Node
             virtual_gamepad_pub_ = this->create_publisher<booster_interface::msg::RemoteControllerState>("remote_controller_state", 10);
             timer_ = create_wall_timer(
                 std::chrono::seconds(1),
-                std::bind(&RobotCommsNode::on_timer, this));
+                std::bind(&VirtualGamepadNode::on_timer, this));
             
         }
 
@@ -70,38 +70,47 @@ class VirtualGamepadNode : public rclcpp::Node
         {
             booster_interface::msg::RemoteControllerState msg;
             // Fill in the message with the current state of the virtual gamepad
-            RemoteControllerInput input;
+            // RemoteControllerInput input;
             // Here you would read the actual state of the virtual gamepad and fill in the input structure
             // For example, you could set some dummy values for testing
-            input.event = 0; // Example event code
-            input.lx = 1.0f; // Left stick X-axis
-            input.ly = 2.0f; // Left stick Y-axis
-            input.rx = 3.0f; // Right stick X-axis
-            input.ry = 4.0f; // Right stick Y-axis
-            input.a = false; // A button
-            input.b = false; // B button
-            input.x = false; // X button
-            input.y = false; // Y button
-            input.lb = false; // Left bumper
-            input.rb = false; // Right bumper
-            input.lt = false; // Left trigger
-            input.rt = false; // Right trigger
-            input.ls = false; // Left stick button
-            input.rs = false; // Right stick button
-            input.back = false; // Back button
-            input.start = false; // Start button
-            input.hat_c = false; // D-pad center
-            input.hat_u = false; // D-pad up
-            input.hat_d = false; // D-pad down
-            input.hat_l = false; // D-pad left
-            input.hat_r = false; // D-pad right
-            input.hat_lu = false; // D-pad left-up
-            input.hat_ld = false; // D-pad left-down
-            input.hat_ru = false; // D-pad right-up
-            input.hat_rd = false; // D-pad right-down
-            input.hat_pos = 0; // D-pad position
-
+            msg.event = 0; // Example event code
+            msg.lx = 0.0f; // Left stick X-axis
+            msg.ly = 0.0f; // Left stick Y-axis
+            msg.rx = 0.0f; // Right stick X-axis
+            msg.ry = 0.0f; // Right stick Y-axis
+            msg.a = true; // A button
+            msg.b = false; // B button
+            msg.x = false; // X button
+            msg.y = false; // Y button
+            msg.lb = false; // Left bumper
+            msg.rb = false; // Right bumper
+            msg.lt = false; // Left trigger
+            msg.rt = false; // Right trigger
+            msg.ls = false; // Left stick button
+            msg.rs = false; // Right stick button
+            msg.back = false; // Back button
+            msg.start = false; // Start button
+            msg.hat_c = false; // D-pad center
+            msg.hat_u = false; // D-pad up
+            msg.hat_d = false; // D-pad down
+            msg.hat_l = false; // D-pad left
+            msg.hat_r = false; // D-pad right
+            msg.hat_lu = false; // D-pad left-up
+            msg.hat_ld = false; // D-pad left-down
+            msg.hat_ru = false; // D-pad right-up
+            msg.hat_rd = false; // D-pad right-down
+            msg.hat_pos = 0; // D-pad position
+            
             virtual_gamepad_pub_->publish(msg);
         }
 
+};
+
+int main(int argc, char *argv[])
+{
+    rclcpp::init(argc, argv);
+    auto node = std::make_shared<VirtualGamepadNode>();
+    rclcpp::spin(node);
+    rclcpp::shutdown();
+    return 0;
 }
