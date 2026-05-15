@@ -16,7 +16,7 @@ class QRSubscriber(Node):
     self.color_subscription = self.create_subscription(
       Image,
       '/StereoNetNode/rectified_image',
-      self.qr_listener_callback,
+      self.vision_listener_callback,
       10)
     
     self.bgr_image = np.zeros((480, 640, 3), dtype=np.uint8)
@@ -26,7 +26,7 @@ class QRSubscriber(Node):
     self.detector = cv2.QRCodeDetector()
 
 
-  def qr_listener_callback(self, msg):
+  def vision_listener_callback(self, msg):
     # self.get_logger().info('Receiving color image')
     yuv = np.frombuffer(msg.data, dtype=np.uint8).reshape((msg.height * 3 // 2, msg.width))
     self.bgr_image = cv2.cvtColor(yuv, cv2.COLOR_YUV2BGR_NV12)
@@ -36,14 +36,14 @@ class QRSubscriber(Node):
 
     data, points, straight_qrcode = detector.detectAndDecode(self.bgr_image)
 
-    if points is not None and data:
-        points = points.astype(int).reshape(-1, 2)
+    # if points is not None and data:
+    #     points = points.astype(int).reshape(-1, 2)
 
-        for i in range(len(points)):
-            p1 = tuple(points[i])
-            p2 = tuple(points[(i + 1) % len(points)])
+    #     for i in range(len(points)):
+    #         p1 = tuple(points[i])
+    #         p2 = tuple(points[(i + 1) % len(points)])
 
-        print("QR data:", data)
+    print("QR data:", data)
         
 
 
