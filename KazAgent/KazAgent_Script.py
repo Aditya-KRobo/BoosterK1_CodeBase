@@ -141,6 +141,7 @@ def main():
                 Busy_flag = 1
                 # Execute dialogue behavior
                 DB.Dialogue_behavior()
+                Busy_flag = 0
 
             #Trigger Picture Hunter behavior, if robot is idle
             elif Button_values[But_RB] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0:
@@ -148,6 +149,7 @@ def main():
                 Busy_flag = 1
                 # Execute dialogue behavior
                 vision_subscriber.picture_hunter()
+                Busy_flag = 0
 
             elif Button_values[But_O] == 1 and Agent_flag == 1 and Busy_flag == 1:
                 print("Requested Robot to be put to Idle mode")

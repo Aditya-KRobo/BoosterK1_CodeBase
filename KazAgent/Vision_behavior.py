@@ -36,8 +36,10 @@ class VisionSubscriber(Node):
         self.orange_l = np.array([10, 50, 70])
         self.orange_u = np.array([24, 255, 255])
 
+        self.cards = ["Dragon", "Lion", "Kangaroo", "Crocodile"]
+
     def vision_listener_callback(self, msg):
-        self.get_logger().info('Receiving color image')
+        # self.get_logger().info('Receiving color image')
         yuv = np.frombuffer(msg.data, dtype=np.uint8).reshape((msg.height * 3 // 2, msg.width))
         self.bgr_image = cv2.cvtColor(yuv, cv2.COLOR_YUV2BGR_NV12)
         self.hsv_image = cv2.cvtColor(self.bgr_image, cv2.COLOR_BGR2HSV)
@@ -48,20 +50,13 @@ class VisionSubscriber(Node):
         detector = cv2.QRCodeDetector()
         data, points, straight_qrcode = detector.detectAndDecode(self.bgr_image)
 
-        while data == None:
+        while data not in self.cards:
 
             data, points, straight_qrcode = detector.detectAndDecode(self.bgr_image)
 
-            # if points is not None and data:
-            #     points = points.astype(int).reshape(-1, 2)
+        print("QR data:", data)
 
-            #     for i in range(len(points)):
-            #         p1 = tuple(points[i])
-            #         p2 = tuple(points[(i + 1) % len(points)])
-
-            print("QR data:", data)
-
-    def color_hunter(self, req_color:String):
+    def color_hunter(self, req_color:string):
         if req_color == 'green':
             mask = cv2.inRange(self.hsv_image, self.green_l, self.green_u)
         elif req_color == 'yellow':
