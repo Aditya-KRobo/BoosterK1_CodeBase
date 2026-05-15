@@ -27,6 +27,10 @@ global Sit_flag
 
 from inputs import get_gamepad
 
+from threading import Thread
+import rclpy
+from rclpy.executors import SingleThreadedExecutor
+
 from booster_robotics_sdk_python import (
     DanceId,
     WholeBodyDanceId,
@@ -45,7 +49,7 @@ import sys, time, random
 
 import Dialogue_behavior as DB
 import Music_Dance_behavior as MDB
-
+import Vision_behavior as VB
 
 def main():
 
@@ -69,68 +73,92 @@ def main():
     # res = client.GetUpWithMode(RobotMode.kWalking)
     # res = client.EnterWBCGait()
 
-    while True:
-        events = get_gamepad()
-        for event in events:
-            # pass
-            # print(f'{event.ev_type} | {event.code} | {event.state}')
-            Button_values[event.code] = event.state
+    rclpy.init(args=None)
+    vision_subscriber = VB.VisionSubscriber()
+    executor = SingleThreadedExecutor()
+    executor.add_node(vision_subscriber)
 
-        # Enable KazAgent v1
-        if Button_values[But_LT] == 1 and Button_values[But_LB] == 1 and Agent_flag == 0:
-            print("KazAgent Enabled!")
-            Busy_flag = 0
-            Agent_flag = 1
-            Stand_flag = 1
-            # Switch to Walk mode
-            # res = client.ChangeMode(RobotMode.kWalking)
+    spin_thread = Thread(target=executor.spin, daemon=True)
+    spin_thread.start()
 
-        #Disable KazAgent v1
-        elif Button_values[But_RT] == 1 and Button_values[But_RB] == 1 and Agent_flag == 1:
-            print("KazAgent Disabled!")
-            Busy_flag = 0
-            Agent_flag = 0
-            Stand_flag = 1
-            # Switch to Walk mode
-            # res = client.ChangeMode(RobotMode.kDamping)
+    try:
+        print("vision system running. Press Ctrl+C to stop.")
+        while True:
 
-        # Trigger Sitdown behavior, if robot is standing and idle
-        if Button_values[But_LT] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Stand_flag == 1 and Busy_flag == 0:
-            print("Requested Sit-down")
-            #Lock the robot process
-            Busy_flag = 1
-            Sit_flag = 1
-            # Execute sit-down behavior
-            Busy_flag = 0
-            Stand_flag = 0
+            events = get_gamepad()
+            for event in events:
+                # pass
+                # print(f'{event.ev_type} | {event.code} | {event.state}')
+                Button_values[event.code] = event.state
 
-        #Trigger Stand-up behavior, if robot is sitting and idle
-        elif Button_values[But_LT] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Sit_flag == 1 and Busy_flag == 0:
-            print("Requested Stand-up")
-            Busy_flag = 1
-            Stand_flag = 1
-            # Execute stand-up behavior
-            Busy_flag = 0
-            Sit_flag = 0
+            # Enable KazAgent v1
+            if Button_values[But_LT] == 1 and Button_values[But_LB] == 1 and Agent_flag == 0:
+                print("KazAgent Enabled!")
+                Busy_flag = 0
+                Agent_flag = 1
+                Stand_flag = 1
+                # Switch to Walk mode
+                # res = client.ChangeMode(RobotMode.kWalking)
 
-        #Trigger Music-Dance behavior, if robot is idle
-        elif Button_values[But_LB] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0:
-            print("Requested Music-Dance")
-            Busy_flag = 1
-            # Execute music-dance behavior
-            # MDB.Music_Dance_behavior(client)
+            #Disable KazAgent v1
+            elif Button_values[But_RT] == 1 and Button_values[But_RB] == 1 and Agent_flag == 1:
+                print("KazAgent Disabled!")
+                Busy_flag = 0
+                Agent_flag = 0
+                Stand_flag = 1
+                # Switch to Walk mode
+                # res = client.ChangeMode(RobotMode.kDamping)
 
-        #Trigger Dialogue behavior, if robot is idle
-        elif Button_values[But_LB] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Busy_flag == 0:
-            print("Requested Dialogue")
-            Busy_flag = 1
-            # Execute dialogue behavior
-            DB.Dialogue_behavior()
+            # Trigger Sitdown behavior, if robot is standing and idle
+            if Button_values[But_LT] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Stand_flag == 1 and Busy_flag == 0:
+                print("Requested Sit-down")
+                #Lock the robot process
+                Busy_flag = 1
+                Sit_flag = 1
+                # Execute sit-down behavior
+                Busy_flag = 0
+                Stand_flag = 0
 
-        elif Button_values[But_O] == 1 and Agent_flag == 1 and Busy_flag == 1:
-            print("Requested Robot to be put to Idle mode")
-            Busy_flag = 0
+            #Trigger Stand-up behavior, if robot is sitting and idle
+            elif Button_values[But_LT] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Sit_flag == 1 and Busy_flag == 0:
+                print("Requested Stand-up")
+                Busy_flag = 1
+                Stand_flag = 1
+                # Execute stand-up behavior
+                Busy_flag = 0
+                Sit_flag = 0
 
+            #Trigger Music-Dance behavior, if robot is idle
+            elif Button_values[But_LB] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0:
+                print("Requested Music-Dance")
+                Busy_flag = 1
+                # Execute music-dance behavior
+                # MDB.Music_Dance_behavior(client)
+
+            #Trigger Dialogue behavior, if robot is idle
+            elif Button_values[But_LB] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Busy_flag == 0:
+                print("Requested Dialogue")
+                Busy_flag = 1
+                # Execute dialogue behavior
+                DB.Dialogue_behavior()
+
+            #Trigger Picture Hunter behavior, if robot is idle
+            elif Button_values[But_RB] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0:
+                print("Requested Picture Hunter")
+                Busy_flag = 1
+                # Execute dialogue behavior
+                vision_subscriber.picture_hunter()
+
+            elif Button_values[But_O] == 1 and Agent_flag == 1 and Busy_flag == 1:
+                print("Requested Robot to be put to Idle mode")
+                Busy_flag = 0
+
+    except KeyboardInterrupt:
+        print("Stopping vision_demo.")
+    finally:
+        executor.shutdown()
+        vision_subscriber.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == "__main__":
