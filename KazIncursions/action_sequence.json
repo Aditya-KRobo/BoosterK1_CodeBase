@@ -1,0 +1,13 @@
+{
+    "move_x" : 0.1,
+    "move_y" : 0.1,
+    "turn" : 0.1,
+    "gait_type" : "normal",
+    "action_list" : [
+        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/1.mp3"],
+        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/2.mp3"],
+        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/3.mp3"],
+        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/4.mp3"],
+        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/5.mp3"]
+    ]
+}

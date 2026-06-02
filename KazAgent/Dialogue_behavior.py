@@ -100,6 +100,20 @@ def Dialogue_behavior():
                 #     pygame.quit()
             
 
+def Single_Dialogue_behavior(audio_file: str):
+    
+    pygame.init()
+
+    pygame.mixer.music.set_volume(1.0)
+    pygame.mixer.music.load(audio_file)
+
+    try:
+        pygame.mixer.music.play()
+        # print("Music started playing...")
+        while pygame.mixer.music.get_busy():
+            time.sleep(1) 
+    except KeyboardInterrupt:
+        pygame.mixer.music.stop()
 
 '''
 def main():
