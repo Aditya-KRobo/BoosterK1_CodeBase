@@ -110,7 +110,7 @@ def main():
                 # res = client.ChangeMode(RobotMode.kDamping)
 
             # Trigger Sitdown behavior, if robot is standing and idle
-            if Button_values[But_LT] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Stand_flag == 1 and Busy_flag == 0:
+            if Button_values[But_LT] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0 and Stand_flag == 1:
                 print("Requested Sit-down")
                 #Lock the robot process
                 Busy_flag = 1
@@ -120,7 +120,7 @@ def main():
                 Stand_flag = 0
 
             #Trigger Stand-up behavior, if robot is sitting and idle
-            elif Button_values[But_LT] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Sit_flag == 1 and Busy_flag == 0:
+            elif Button_values[But_LT] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Busy_flag == 0 and Sit_flag == 1:
                 print("Requested Stand-up")
                 Busy_flag = 1
                 Stand_flag = 1
@@ -129,18 +129,19 @@ def main():
                 Sit_flag = 0
 
             #Trigger Music-Dance behavior, if robot is idle
-            elif Button_values[But_LB] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0:
+            elif Button_values[But_LB] == 1 and Button_values[But_Min] == 1 and Agent_flag == 1 and Busy_flag == 0 and Stand_flag == 1:
                 print("Requested Music-Dance")
                 Busy_flag = 1
                 # Execute music-dance behavior
                 # MDB.Music_Dance_behavior(client)
+                Busy_flag = 0
 
             #Trigger Dialogue behavior, if robot is idle
             elif Button_values[But_LB] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Busy_flag == 0:
                 print("Requested Dialogue")
                 Busy_flag = 1
                 # Execute dialogue behavior
-                DB.Dialogue_behavior()
+                #DB.Dialogue_behavior()
                 Busy_flag = 0
 
             #Trigger Picture Hunter behavior, if robot is idle
@@ -148,7 +149,15 @@ def main():
                 print("Requested Picture Hunter")
                 Busy_flag = 1
                 # Execute dialogue behavior
-                vision_subscriber.picture_hunter()
+                #vision_subscriber.picture_hunter()
+                Busy_flag = 0
+            
+            #Trigger Color Hunter behavior, if robot is idle
+            elif Button_values[But_RB] == 1 and Button_values[But_Plu] == 1 and Agent_flag == 1 and Busy_flag == 0:
+                print("Requested Color Hunter")
+                Busy_flag = 1
+                # Execute dialogue behavior
+                #vision_subscriber.color_hunter("green")
                 Busy_flag = 0
 
             elif Button_values[But_O] == 1 and Agent_flag == 1 and Busy_flag == 1:
