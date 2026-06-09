@@ -15,10 +15,11 @@ But_SELECT = "BTN_SELECT"
 But_O = "BTN_THUMBL"
 But_HOME = "BTN_MODE"
 
-Code_map = {0:"ABS_HAT0X", 1:"ABS_HAT0Y", 310:"BTN_LT", 311:"BTN_RT", 308:"BTN_Y", 307:"BTN_X", 304:"BTN_A", 305:"BTN_B"}
+Code_map = {0:"ABS_HAT0X", 1:"ABS_HAT0Y", 310:"BTN_LT", 311:"BTN_RT", 308:"BTN_Y", 307:"BTN_X", 304:"BTN_A", 305:"BTN_B", 312:"BTN_LB", 313:"BTN_RB"}
+New_Button_values = {0: 0, 1: 0, 310: 0, 311: 0, 308: 0, 307: 0, 304: 0, 305: 0, 312: 0, 313: 0}
 Button_values = {"BTN_EAST": 0, "BTN_C": 0, "BTN_SOUTH": 0, "BTN_NORTH": 0, "BTN_WEST": 0, "BTN_Z": 0, "BTN_TL": 0, "BTN_TR": 0, "BTN_TL2": 0, "BTN_TR2": 0, "ABS_HAT0X": 0, "ABS_HAT0Y": 0, "BTN_START": 0, "BTN_SELECT": 0, "BTN_THUMBL": 0, "BTN_MODE": 0}
 
-json_path = 'KazIncursions/action_sequence.json'
+json_path = '/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/action_sequence.json'
 
 
 global Agent_flag
@@ -47,13 +48,13 @@ from booster_robotics_sdk_python import (
     Frame,
     Transform,
 )
-import sys, time, random
+import os, sys, time, random
 
-import KazAgent.Dialogue_behavior as DB
-import KazAgent.Music_Dance_behavior as MDB
-import KazAgent.Vision_behavior as VB
-
-
+# folder_path = os.path.abspath('~/Workspace/BoosterK1_CodeBase/KazAgent')
+# sys.path.insert(0, folder_path)
+import Dialogue_behavior as DB
+import Music_Dance_behavior as MDB
+import Vision_behavior as VB
 
 
 def action_list_parser() -> list:
@@ -64,13 +65,13 @@ def action_list_parser() -> list:
 
 def main():
 
-    # if len(sys.argv) < 2:
-    #     print(f"Usage: {sys.argv[0]} networkInterface")
-    #     sys.exit(-1)
+    if len(sys.argv) < 2:
+        print(f"Usage: {sys.argv[0]} networkInterface")
+        sys.exit(-1)
 
-    # ChannelFactory.Instance().Init(0, sys.argv[1])
+    ChannelFactory.Instance().Init(0, sys.argv[1])
 
-    ChannelFactory.Instance().Init(0,'127.0.0.1')
+    # ChannelFactory.Instance().Init(0,'127.0.0.1')
 
     client = B1LocoClient()
     client.Init()
@@ -86,10 +87,10 @@ def main():
 
     time.sleep(5)
     # res = client.ChangeMode(RobotMode.kCustom)
-    res = client.GetUpWithMode(RobotMode.kWalking)
-    if res != 0:
-        print(f"Failed to get up with error code : {res}!")
-        return
+    # res = client.ChangeMode(RobotMode.kWalking)
+    # if res != 0:
+    #     print(f"Failed to get up with error code : {res}!")
+    #     # return
     # res = client.EnterWBCGait()
 
     rclpy.init(args=None)
@@ -100,7 +101,7 @@ def main():
     spin_thread = Thread(target=executor.spin, daemon=True)
     spin_thread.start()
 
-    gamepad = InputDevice('/dev/input/event20')
+    gamepad = InputDevice('/dev/input/event11')
 
     try:
         print("vision system running. Press Ctrl+C to stop.")
@@ -108,22 +109,29 @@ def main():
             
             for event in gamepad.read_loop():
                 if event.type == ecodes.EV_KEY:
-                    print(categorize(event))
+                    pass
+                    # print((event.code,event.value))
+                    # print(Code_map[int(event.code)])
+                    # print(New_Button_values[int(event.code)])
                 elif event.type == ecodes.EV_ABS:
-                    print((event.code,event.value))
+                    pass
+                    # print((event.code,event.value))
                 
-                Button_values[Code_map[event.code]] = event.state
+                New_Button_values[int(event.code)] = int(event.value)
+                print (New_Button_values)
+                print ("------------------------------")
 
-            events = get_gamepad()
-            for event in events:
-                # pass
-                print(f'{event.ev_type} | {event.code} | {event.state}')
-                Button_values[event.code] = event.state
+            # events = get_gamepad()
+            # for event in events:
+            #     # pass
+            #     print(f'{event.ev_type} | {event.code} | {event.state}')
+            #     Button_values[event.code] = event.state
 
             # Logic flow:
             # 1. Priortize Joystick input for body movement; Reset movement if joystick released to middle position
             # 2. Then if a relevant button is pressed, do the actions following sqeuence from json file for actions
 
+            '''
             # Enable IncursionAgent
             if Button_values[But_RT] == 1 and Button_values[But_LT] == 0 and Agent_flag == 0:
                 print("IncursionAgent Enabled!")
@@ -146,19 +154,19 @@ def main():
             if (Button_values[D_Y] == 1 or Button_values[D_X] == 1) and Agent_flag == 1:
                 client.Move(0.0,0.0,0.0)
 
-            elif Button_values[D_Y] == 0 and Agent_flag == 1:
+            elif Button_values[D_Y] == 0 and Button_values[D_X] == 0 and Agent_flag == 1:
                 #Forward
                 client.Move(0.1,0.0,0.0)
 
-            elif Button_values[D_Y] == 2 and Agent_flag == 1:
+            elif Button_values[D_Y] == 2 and Button_values[D_X] == 0 and Agent_flag == 1:
                 #Backward
                 client.Move(0.1,0.0,0.0)
 
-            elif Button_values[D_X] == 0 and Agent_flag == 1:
+            elif Button_values[D_X] == 0 and Button_values[D_Y] == 1 and Agent_flag == 1:
                 #Left turn
                 client.Move(0.0,0.0,-0.1)
 
-            elif Button_values[D_X] == 2 and Agent_flag == 1:
+            elif Button_values[D_X] == 2 and Button_values[D_Y] == 1 and Agent_flag == 1:
                 #Right turn
                 client.Move(0.0,0.0,0.1)
             
@@ -192,7 +200,7 @@ def main():
                         # Execute dialogue behavior
                         DB.Single_Dialogue_behavior(Action_item[1])
                         Busy_flag = 0
-
+            '''
 
     except KeyboardInterrupt:
         print("Stopping vision_demo.")
