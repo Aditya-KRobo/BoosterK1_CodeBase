@@ -185,12 +185,12 @@ def main():
                         # Execute the action at Action_index from Action_list
                         Action_item = Action_list[Action_index]
                         print(f"Executing action: {Action_item}")
-                        if Action_item[0] == "A":
+                        if Action_item[0] == "DG":
                             print("Requested Dialogue")
                             # Execute dialogue behavior
                             DB.Single_Dialogue_behavior(Action_item[1])
 
-                        elif Action_item[0] == "B":
+                        elif Action_item[0] == "DGDC":
                             print("Requested Dialogue + Dance")
                             # Execute dialogue behavior and dance behavior
                             DB.Single_Dialogue_behavior(Action_item[1])
