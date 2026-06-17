@@ -4,10 +4,10 @@
     "turn" : 0.1,
     "gait_type" : "normal",
     "action_list" : [
-        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/1.mp3"],
-        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/2.mp3"],
-        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/3.mp3"],
-        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/4.mp3"],
-        ["DG","~/Workspace/BooosterK1_Codebase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/5.mp3"]
+        ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/01.mp3"],
+        ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/02.mp3"],
+        ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/03.mp3"],
+        ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/04.mp3"],
+        ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/05.mp3"]
     ]
 }

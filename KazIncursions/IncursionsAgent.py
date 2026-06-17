@@ -79,8 +79,6 @@ def main():
 
     Agent_flag = 0
     Busy_flag = 0
-    Sit_flag = 0
-    Stand_flag = 0
 
     Action_index = -1
     Action_list = action_list_parser()
@@ -108,6 +106,9 @@ def main():
         while True:
             
             for event in gamepad.read_loop():
+                
+                Old_Button_values = New_Button_values.copy()
+                
                 if event.type == ecodes.EV_KEY:
                     print((event.code,event.value))
                     print(Code_map[int(event.code)])
@@ -120,6 +121,10 @@ def main():
                     # print((event.code,event.value))
                     print(New_Button_values[D_X], New_Button_values[D_Y])
                 # print ("------------------------------")
+
+                if New_Button_values == Old_Button_values:
+                    print("Button values unchanged!")
+                    continue
 
             # events = get_gamepad()
             # for event in events:
@@ -136,7 +141,6 @@ def main():
                     print("IncursionAgent Enabled!")
                     Busy_flag = 0
                     Agent_flag = 1
-                    Stand_flag = 1
                     # Switch to Walk mode
                     # res = client.ChangeMode(RobotMode.kWalking)
 
@@ -145,7 +149,6 @@ def main():
                     print("IncursionAgent Disabled!")
                     Busy_flag = 0
                     Agent_flag = 0
-                    Stand_flag = 1
                     # Switch to Walk mode
                     # res = client.ChangeMode(RobotMode.kWalking)
 
@@ -171,8 +174,8 @@ def main():
                     print("Turning right")
                     client.Move(0.0,0.0,-0.5)
                 
-                '''
-                elif New_Button_values[But_A] == 1 and New_Button_values[But_B] == 0 and Agent_flag == 1:
+                
+                if New_Button_values[304] == 1 and New_Button_values[305] == 0 and Agent_flag == 1:
                     Action_index += 1
                     if Action_index >= len(Action_list):
                         print("No more actions in the list!")
@@ -187,7 +190,8 @@ def main():
                             DB.Single_Dialogue_behavior(Action_item[1])
                             Busy_flag = 0
 
-                elif New_Button_values[But_B] == 1 and New_Button_values[But_A] == 0 and Agent_flag == 1:
+                '''
+                elif New_Button_values[int(But_B)] == 1 and New_Button_values[int(But_A)] == 0 and Agent_flag == 1:
                     Action_index -= 1
                     if Action_index >= len(Action_list):
                         print("No more actions in the list!")
