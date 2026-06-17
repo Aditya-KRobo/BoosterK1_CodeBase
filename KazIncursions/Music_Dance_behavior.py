@@ -29,7 +29,7 @@ Button_values = {"BTN_EAST": 0, "BTN_C": 0, "BTN_SOUTH": 0, "BTN_NORTH": 0, "BTN
 
 import threading
 
-
+''''
 def danceRoutine(client): #,dance_sequence,wbd,d):
     print("Dance thread starting...")
     time.sleep(1) # Simulate an I/O operation
@@ -78,9 +78,9 @@ def danceRoutine(client): #,dance_sequence,wbd,d):
                 dance_num = 0
                 print("Dance completed.")
                 break
+'''
 
-
-
+'''
 def Music_Dance_behavior(client : B1LocoClient):#music, dance_sequence, wbd, d):
     # Create and start dance thread
     dance_thread = threading.Thread(target=danceRoutine, args=(client,))#dance_sequence, wbd, d, ))
@@ -105,7 +105,10 @@ def Music_Dance_behavior(client : B1LocoClient):#music, dance_sequence, wbd, d):
     dance_thread.join()
 
     print("Main thread: all done.")
+'''
 
+def Single_Dance_behavior(client : B1LocoClient, dance_id):
+    res = client.Dance(dance_id)
 
 '''
 

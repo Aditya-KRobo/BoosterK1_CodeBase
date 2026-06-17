@@ -149,6 +149,7 @@ def main():
                     print("IncursionAgent Disabled!")
                     Busy_flag = 0
                     Agent_flag = 0
+                    Action_index = -1
                     # Switch to Walk mode
                     # res = client.ChangeMode(RobotMode.kWalking)
 
@@ -175,7 +176,7 @@ def main():
                     client.Move(0.0,0.0,-0.5)
                 
                 
-                if New_Button_values[304] == 1 and New_Button_values[305] == 0 and Agent_flag == 1:
+                if New_Button_values[int(But_A)] == 1 and New_Button_values[int(But_B)] == 0 and Agent_flag == 1:
                     Action_index += 1
                     if Action_index >= len(Action_list):
                         print("No more actions in the list!")
@@ -183,12 +184,17 @@ def main():
                     else:
                         # Execute the action at Action_index from Action_list
                         Action_item = Action_list[Action_index]
-                        if Action_item[0] == "DG":
+                        print(f"Executing action: {Action_item}")
+                        if Action_item[0] == "A":
                             print("Requested Dialogue")
-                            Busy_flag = 1
                             # Execute dialogue behavior
                             DB.Single_Dialogue_behavior(Action_item[1])
-                            Busy_flag = 0
+
+                        elif Action_item[0] == "B":
+                            print("Requested Dialogue + Dance")
+                            # Execute dialogue behavior and dance behavior
+                            DB.Single_Dialogue_behavior(Action_item[1])
+                            MDB.Single_Dialogue_Dance_behavior(client, Action_item[2])
 
                 '''
                 elif New_Button_values[int(But_B)] == 1 and New_Button_values[int(But_A)] == 0 and Agent_flag == 1:

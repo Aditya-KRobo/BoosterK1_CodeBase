@@ -6,7 +6,7 @@
     "action_list" : [
         ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/01.mp3"],
         ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/02.mp3"],
-        ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/03.mp3"],
+        ["DGDC","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/03.mp3",2],
         ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/04.mp3"],
         ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/05.mp3"]
     ]
