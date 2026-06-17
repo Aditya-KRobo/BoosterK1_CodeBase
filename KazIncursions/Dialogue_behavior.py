@@ -110,8 +110,8 @@ def Single_Dialogue_behavior(audio_file: str):
     try:
         pygame.mixer.music.play()
         # print("Music started playing...")
-        while pygame.mixer.music.get_busy():
-            time.sleep(1) 
+        # while pygame.mixer.music.get_busy():
+        #     time.sleep(1) 
     except KeyboardInterrupt:
         pygame.mixer.music.stop()
 
