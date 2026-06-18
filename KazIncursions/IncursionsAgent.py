@@ -83,6 +83,8 @@ def main():
     Action_index = -1
     Action_list = action_list_parser()
 
+    Last_action = None
+
     time.sleep(5)
     # res = client.ChangeMode(RobotMode.kCustom)
     res = client.ChangeMode(RobotMode.kWalking)
@@ -110,20 +112,20 @@ def main():
                 Old_Button_values = New_Button_values.copy()
                 
                 if event.type == ecodes.EV_KEY:
-                    print((event.code,event.value))
-                    print(Code_map[int(event.code)])
+                    # print((event.code,event.value))
+                    # print(Code_map[int(event.code)])
                     if event.code == 304 or event.code == 305 or event.code == 310 or event.code == 311:
                         New_Button_values[int(event.code)] = int(event.value)
-                    print(New_Button_values[int(event.code)])
+                    # print(New_Button_values[int(event.code)])
 
                 elif event.type == ecodes.EV_ABS:
                     New_Button_values[int(event.code)] = int(event.value)
                     # print((event.code,event.value))
-                    print(New_Button_values[D_X], New_Button_values[D_Y])
+                    # print(New_Button_values[D_X], New_Button_values[D_Y])
                 # print ("------------------------------")
 
                 if New_Button_values == Old_Button_values:
-                    print("Button values unchanged!")
+                    # print("Button values unchanged!")
                     continue
 
             # events = get_gamepad()
@@ -138,7 +140,7 @@ def main():
             
                 # Enable IncursionAgent
                 if New_Button_values[int(But_RT)] == 1 and New_Button_values[int(But_LT)] == 0 and Agent_flag == 0:
-                    print("IncursionAgent Enabled!")
+                    # print("IncursionAgent Enabled!")
                     Busy_flag = 0
                     Agent_flag = 1
                     # Switch to Walk mode
@@ -146,7 +148,7 @@ def main():
 
                 #Disable IncursionAgent
                 elif New_Button_values[int(But_RT)] == 0 and New_Button_values[int(But_LT)] == 1 and Agent_flag == 1:
-                    print("IncursionAgent Disabled!")
+                    # print("IncursionAgent Disabled!")
                     Busy_flag = 0
                     Agent_flag = 0
                     Action_index = -1
@@ -156,46 +158,55 @@ def main():
                 
                 #Prometheus movement commands
                 if (New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1) and Agent_flag == 1:
-                    print("Standing still")
+                    # print("Standing still")
                     client.Move(0.0,0.0,0.0)
 
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1:
-                    print("Moving forward")
+                    # print("Moving forward")
                     client.Move(0.5,0.0,0.0)
 
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1:
-                    print("Moving backward")
+                    # print("Moving backward")
                     client.Move(-0.5,0.0,0.0)
 
                 elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1:
-                    print("Turning left")
+                    # print("Turning left")
                     client.Move(0.0,0.0,0.5)
 
                 elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1:
-                    print("Turning right")
+                    # print("Turning right")
                     client.Move(0.0,0.0,-0.5)
                 
                 
                 if New_Button_values[int(But_A)] == 1 and New_Button_values[int(But_B)] == 0 and Agent_flag == 1:
                     Action_index += 1
                     if Action_index >= len(Action_list):
-                        print("No more actions in the list!")
+                        # print("No more actions in the list!")
                         Action_index = len(Action_list) - 1
                     else:
                         # Execute the action at Action_index from Action_list
                         Action_item = Action_list[Action_index]
-                        print(f"Executing action: {Action_item}")
+                        if (Last_action == "DGDC"):
+                            MDB.Single_Dance_behavior(client, 1000)
+                            time.sleep(1)
+                            res = client.ChangeMode(RobotMode.kWalking)
+                            # MDB.Single_Dance_behavior(client, Action_item[2])
+
+                        # print(f"Executing action: {Action_item}")
                         if Action_item[0] == "DG":
-                            print("Requested Dialogue")
+                            # print("Requested Dialogue")
                             # Execute dialogue behavior
                             DB.Single_Dialogue_behavior(Action_item[1])
 
+
                         elif Action_item[0] == "DGDC":
-                            print("Requested Dialogue + Dance")
+                            # print("Requested Dialogue + Dance")
                             # Execute dialogue behavior and dance behavior
                             DB.Single_Dialogue_behavior(Action_item[1])
-                            MDB.Single_Dialogue_Dance_behavior(client, Action_item[2])
+                            MDB.Single_Dance_behavior(client, Action_item[2])
 
+                        Last_action = Action_item[0]
+    
                 '''
                 elif New_Button_values[int(But_B)] == 1 and New_Button_values[int(But_A)] == 0 and Agent_flag == 1:
                     Action_index -= 1

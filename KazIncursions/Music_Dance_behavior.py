@@ -27,6 +27,18 @@ But_HOME = "BTN_MODE"
 
 Button_values = {"BTN_EAST": 0, "BTN_C": 0, "BTN_SOUTH": 0, "BTN_NORTH": 0, "BTN_WEST": 0, "BTN_Z": 0, "ABS_RX": 0, "ABS_RY": 0, "BTN_TL2": 0, "BTN_TR2": 0, "ABS_HAT0X": 0, "ABS_HAT0Y": 0, "BTN_START": 0, "BTN_SELECT": 0, "BTN_THUMBL": 0, "BTN_MODE": 0}
 
+Dance_commands = { 
+    0: DanceId.kNewYear,
+    1: DanceId.kNezha,
+    2: DanceId.kTowardsFuture,
+    # 3: DanceId.kPogbaGesture,
+    4: DanceId.kUltramanGesture,
+    # 5: DanceId.kChineseGreetingGesture,
+    6: DanceId.kCheeringGesture,
+    # 7: DanceId.kManekiGesture,
+    1000: DanceId.kStop,
+}
+ 
 import threading
 
 ''''
@@ -108,7 +120,7 @@ def Music_Dance_behavior(client : B1LocoClient):#music, dance_sequence, wbd, d):
 '''
 
 def Single_Dance_behavior(client : B1LocoClient, dance_id):
-    res = client.Dance(dance_id)
+    res = client.Dance(Dance_commands.get(dance_id))
 
 '''
 
