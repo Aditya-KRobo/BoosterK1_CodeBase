@@ -79,6 +79,7 @@ def main():
 
     Agent_flag = 0
     Busy_flag = 0
+    Body_head_switch = 0
 
     Action_index = -1
     Action_list = action_list_parser()
@@ -155,6 +156,13 @@ def main():
                     # Switch to Walk mode
                     # res = client.ChangeMode(RobotMode.kWalking)
 
+                if New_Button_values[int(But_B)] == 1 and New_Button_values[int(But_A)] == 0 and Agent_flag == 1:
+                    if Body_head_switch == 0:
+                        print("Switching to Head Control")
+                        Body_head_switch = 1
+                    elif Body_head_switch == 1:
+                        print("Switching to Body Control")
+                        Body_head_switch = 0
                 
                 #Prometheus movement commands
                 if (New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1) and Agent_flag == 1:
@@ -177,6 +185,9 @@ def main():
                     # print("Turning right")
                     client.Move(0.0,0.0,-0.5)
                 
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 1:
+                    print("Looking up")
+
                 
                 if New_Button_values[int(But_A)] == 1 and New_Button_values[int(But_B)] == 0 and Agent_flag == 1:
                     Action_index += 1
