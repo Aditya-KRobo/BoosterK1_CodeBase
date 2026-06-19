@@ -77,12 +77,6 @@ def parameter_parser():
 
 def main():
 
-    # if len(sys.argv) < 2:
-    #     print(f"Usage: {sys.argv[0]} networkInterface")
-    #     sys.exit(-1)
-
-    # ChannelFactory.Instance().Init(0, sys.argv[1])
-
     ChannelFactory.Instance().Init(0,'127.0.0.1')
 
     client = B1LocoClient()
@@ -106,11 +100,12 @@ def main():
     time.sleep(5)
     # res = client.ChangeMode(RobotMode.kCustom)
     res = client.ChangeMode(RobotMode.kWalking)
+    # res = client.RotateHead(0.0,0.0)
     if res != 0:
         print(f"Failed to get up with error code : {res}!")
         # return
     # res = client.EnterWBCGait()
-    client.RotateHead(0.0,0.0)
+    
 
     rclpy.init(args=None)
     vision_subscriber = VB.VisionSubscriber()
@@ -146,12 +141,6 @@ def main():
                 if New_Button_values == Old_Button_values:
                     # print("Button values unchanged!")
                     continue
-
-            # events = get_gamepad()
-            # for event in events:
-            #     # pass
-            #     print(f'{event.ev_type} | {event.code} | {event.state}')
-            #     Button_values[event.code] = event.state
 
                 # Logic flow:
                 # 1. Priortize Joystick input for body movement; Reset movement if joystick released to middle position
@@ -206,26 +195,26 @@ def main():
                 #Prometheus head movement commands
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking up")
-                    pitch -= 0.005
-                    pitch =  pitch_up if pitch < pitch_up else pitch_down if pitch > pitch_down else pitch
+                    pitch -= 0.02
+                    pitch =  max(pitch_up, pitch)
                     client.RotateHead(pitch,yaw)
 
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking down")
-                    pitch += 0.005
-                    pitch =  pitch_up if pitch < pitch_up else pitch_down if pitch > pitch_down else pitch
+                    pitch += 0.02
+                    pitch =  max(pitch_up, min(pitch_down, pitch))
                     client.RotateHead(pitch,yaw)
 
                 elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking left")
-                    yaw += 0.005
-                    yaw =  yaw_left if yaw < yaw_left else yaw_right if yaw > yaw_right else yaw
+                    yaw += 0.02
+                    yaw =  min(yaw,yaw_left)
                     client.RotateHead(pitch,yaw)
 
                 elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking right")
-                    yaw -= 0.005
-                    yaw =  yaw_left if yaw < yaw_left else yaw_right if yaw > yaw_right else yaw
+                    yaw -= 0.02
+                    yaw =  max(yaw_right,yaw)
                     client.RotateHead(pitch,yaw)
 
 
