@@ -1,8 +1,12 @@
 {
-    "move_x" : 0.1,
-    "move_y" : 0.1,
-    "turn" : 0.1,
+    "move_x" : 0.5,
+    "move_y" : 0.5,
+    "turn" : 0.5,
     "gait_type" : "normal",
+    "head_up" : -0.2,
+    "head_down" : 0.75,
+    "head_left" : 0.5,
+    "head_right" : -0.5,
     "action_list" : [
         ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/01.mp3",1000],
         ["DG","/home/booster/Workspace/BoosterK1_CodeBase/KazIncursions/Audio_Files/Safety_Show_Robot_Vocals/02.mp3",1000],

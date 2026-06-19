@@ -62,6 +62,18 @@ def action_list_parser() -> list:
         data = json.load(f)
     return data["action_list"]
 
+def parameter_parser():
+    with open(json_path) as f:
+        data = json.load(f)
+    move_x = data["move_x"]
+    move_y = data["move_y"]
+    turn = data["turn"]
+    gait_type = data["gait_type"]
+    head_up = data["head_up"]
+    head_down = data["head_down"]
+    head_left = data["head_left"]
+    head_right = data["head_right"]
+    return move_x, move_y, turn, gait_type, head_up, head_down, head_left, head_right
 
 def main():
 
@@ -86,6 +98,11 @@ def main():
 
     Last_action = None
 
+    x_spd, y_spd, turn_spd, gait, pitch_up, pitch_down, yaw_left, yaw_right = parameter_parser()
+    pitch = 0.0
+    yaw = 0.0
+
+    # Robot setup: Walk Mode, Head looking straight ahead
     time.sleep(5)
     # res = client.ChangeMode(RobotMode.kCustom)
     res = client.ChangeMode(RobotMode.kWalking)
@@ -93,6 +110,7 @@ def main():
         print(f"Failed to get up with error code : {res}!")
         # return
     # res = client.EnterWBCGait()
+    client.RotateHead(0.0,0.0)
 
     rclpy.init(args=None)
     vision_subscriber = VB.VisionSubscriber()
@@ -164,31 +182,53 @@ def main():
                         print("Switching to Body Control")
                         Body_head_switch = 0
                 
-                #Prometheus movement commands
-                if (New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1) and Agent_flag == 1:
+                #Prometheus body movement commands
+                if (New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1) and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Standing still")
                     client.Move(0.0,0.0,0.0)
 
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1:
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Moving forward")
-                    client.Move(0.5,0.0,0.0)
+                    client.Move(x_spd,0.0,0.0)
 
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1:
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Moving backward")
-                    client.Move(-0.5,0.0,0.0)
+                    client.Move(-x_spd,0.0,0.0)
 
-                elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1:
+                elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Turning left")
-                    client.Move(0.0,0.0,0.5)
+                    client.Move(0.0,0.0,turn_spd)
 
-                elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1:
+                elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Turning right")
-                    client.Move(0.0,0.0,-0.5)
+                    client.Move(0.0,0.0,-turn_spd)
                 
+                #Prometheus head movement commands
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking up")
+                    pitch -= 0.005
+                    pitch =  pitch_up if pitch < pitch_up else pitch_down if pitch > pitch_down else pitch
+                    client.RotateHead(pitch,yaw)
 
-                
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1 and Body_head_switch == 1:
+                    print("Looking down")
+                    pitch += 0.005
+                    pitch =  pitch_up if pitch < pitch_up else pitch_down if pitch > pitch_down else pitch
+                    client.RotateHead(pitch,yaw)
+
+                elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
+                    print("Looking left")
+                    yaw += 0.005
+                    yaw =  yaw_left if yaw < yaw_left else yaw_right if yaw > yaw_right else yaw
+                    client.RotateHead(pitch,yaw)
+
+                elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
+                    print("Looking right")
+                    yaw -= 0.005
+                    yaw =  yaw_left if yaw < yaw_left else yaw_right if yaw > yaw_right else yaw
+                    client.RotateHead(pitch,yaw)
+
+
                 if New_Button_values[int(But_A)] == 1 and New_Button_values[int(But_B)] == 0 and Agent_flag == 1:
                     Action_index += 1
                     if Action_index >= len(Action_list):
