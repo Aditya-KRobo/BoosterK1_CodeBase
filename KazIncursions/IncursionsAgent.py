@@ -86,6 +86,7 @@ def main():
     Agent_flag = 0
     Busy_flag = 0
     Body_head_switch = 0
+    Head_direction = ""
 
     Action_index = -1
     Action_list = action_list_parser()
@@ -115,14 +116,42 @@ def main():
     spin_thread = Thread(target=executor.spin, daemon=True)
     spin_thread.start()
 
-    gamepad = InputDevice('/dev/input/event11')
+    gamepad = InputDevice('/dev/input/event7')
 
     try:
         print("vision system running. Press Ctrl+C to stop.")
+        
+        Head_direction = "Center"
+
         while True:
-            
+
             for event in gamepad.read_loop():
-                
+
+                if Agent_flag == 1:
+                    if Head_direction == "Up" and Body_head_switch == 1:
+                        pitch -= 0.05
+                        pitch =  max(pitch_up, pitch)
+                        client.RotateHead(pitch,yaw)
+                        print("Looking up...")
+
+                    elif Head_direction == "Down" and Body_head_switch == 1:
+                        pitch += 0.05
+                        pitch =  max(pitch_up, min(pitch_down, pitch))
+                        client.RotateHead(pitch,yaw)
+                        print("Looking down...")
+
+                    elif Head_direction == "Left" and Body_head_switch == 1:
+                        yaw += 0.05
+                        yaw =  min(yaw,yaw_left)
+                        client.RotateHead(pitch,yaw)
+                        print("Looking left...")
+
+                    elif Head_direction == "Right" and Body_head_switch == 1:
+                        yaw -= 0.05
+                        yaw =  max(yaw_right,yaw)
+                        client.RotateHead(pitch,yaw)
+                        print("Looking right...")
+
                 Old_Button_values = New_Button_values.copy()
                 
                 if event.type == ecodes.EV_KEY:
@@ -193,27 +222,35 @@ def main():
                     client.Move(0.0,0.0,-turn_spd)
                 
                 #Prometheus head movement commands
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
+                    Head_direction = "Center"
+                    print("Looking straight ahead")
+
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking up")
-                    pitch -= 0.02
+                    Head_direction = "Up"
+                    pitch -= 0.05
                     pitch =  max(pitch_up, pitch)
                     client.RotateHead(pitch,yaw)
 
                 elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking down")
-                    pitch += 0.02
+                    Head_direction = "Down"
+                    pitch += 0.05
                     pitch =  max(pitch_up, min(pitch_down, pitch))
                     client.RotateHead(pitch,yaw)
 
                 elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking left")
-                    yaw += 0.02
+                    Head_direction = "Left"
+                    yaw += 0.05
                     yaw =  min(yaw,yaw_left)
                     client.RotateHead(pitch,yaw)
 
                 elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking right")
-                    yaw -= 0.02
+                    Head_direction = "Right"
+                    yaw -= 0.05
                     yaw =  max(yaw_right,yaw)
                     client.RotateHead(pitch,yaw)
 
