@@ -26,6 +26,10 @@ global Agent_flag
 global Busy_flag
 global Stand_flag
 global Sit_flag
+global Body_head_switch
+global Joystick_direction
+
+import threading
 
 from evdev import InputDevice, categorize, ecodes
 
@@ -75,18 +79,74 @@ def parameter_parser():
     head_right = data["head_right"]
     return move_x, move_y, turn, gait_type, head_up, head_down, head_left, head_right
 
+def gamepad_input():
+    gamepad = InputDevice('/dev/input/event7')
+
+    try:
+        print("vision system running. Press Ctrl+C to stop.")
+        
+        global Joystick_direction
+        Joystick_direction = "Center"
+
+        while True:
+
+            for event in gamepad.read_loop():
+                
+                Old_Button_values = New_Button_values.copy()
+                
+                if event.type == ecodes.EV_KEY:
+                    # print((event.code,event.value))
+                    # print(Code_map[int(event.code)])
+                    if event.code == 304 or event.code == 305 or event.code == 310 or event.code == 311:
+                        New_Button_values[int(event.code)] = int(event.value)
+                    # print(New_Button_values[int(event.code)])
+
+                elif event.type == ecodes.EV_ABS:
+                    New_Button_values[int(event.code)] = int(event.value)
+                    # print((event.code,event.value))
+                    # print(New_Button_values[D_X], New_Button_values[D_Y])
+                # print ("------------------------------")
+
+                if New_Button_values == Old_Button_values:
+                    # print("Button values unchanged!")
+                    continue
+                
+
+                # Record joystick direction input
+                if (New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1):
+                    # print("Standing still")
+                    Joystick_direction = "Center"
+
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0:
+                    # print("Moving forward")
+                    Joystick_direction = "Up"
+
+                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2:
+                    # print("Moving backward")
+                    Joystick_direction = "Down"
+
+                elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1:
+                    # print("Turning left")
+                    Joystick_direction = "Left"
+
+                elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1:
+                    # print("Turning right")
+                    Joystick_direction = "Right"
+
+    except KeyboardInterrupt:
+        print("Stopping vision_demo.")
+
+
 def main():
+
+    thread = Thread(target=gamepad_input, daemon=True)
+    thread.start()
 
     ChannelFactory.Instance().Init(0,'127.0.0.1')
 
     client = B1LocoClient()
     client.Init()
     res = 0
-
-    Agent_flag = 0
-    Busy_flag = 0
-    Body_head_switch = 0
-    Head_direction = ""
 
     Action_index = -1
     Action_list = action_list_parser()
@@ -99,7 +159,6 @@ def main():
 
     # Robot setup: Walk Mode, Head looking straight ahead
     time.sleep(5)
-    # res = client.ChangeMode(RobotMode.kCustom)
     res = client.ChangeMode(RobotMode.kWalking)
     # res = client.RotateHead(0.0,0.0)
     if res != 0:
@@ -121,55 +180,10 @@ def main():
     try:
         print("vision system running. Press Ctrl+C to stop.")
         
-        Head_direction = "Center"
+        global Joystick_direction
+        Joystick_direction = "Center"
 
         while True:
-
-            for event in gamepad.read_loop():
-
-                if Agent_flag == 1:
-                    if Head_direction == "Up" and Body_head_switch == 1:
-                        pitch -= 0.05
-                        pitch =  max(pitch_up, pitch)
-                        client.RotateHead(pitch,yaw)
-                        print("Looking up...")
-
-                    elif Head_direction == "Down" and Body_head_switch == 1:
-                        pitch += 0.05
-                        pitch =  max(pitch_up, min(pitch_down, pitch))
-                        client.RotateHead(pitch,yaw)
-                        print("Looking down...")
-
-                    elif Head_direction == "Left" and Body_head_switch == 1:
-                        yaw += 0.05
-                        yaw =  min(yaw,yaw_left)
-                        client.RotateHead(pitch,yaw)
-                        print("Looking left...")
-
-                    elif Head_direction == "Right" and Body_head_switch == 1:
-                        yaw -= 0.05
-                        yaw =  max(yaw_right,yaw)
-                        client.RotateHead(pitch,yaw)
-                        print("Looking right...")
-
-                Old_Button_values = New_Button_values.copy()
-                
-                if event.type == ecodes.EV_KEY:
-                    # print((event.code,event.value))
-                    # print(Code_map[int(event.code)])
-                    if event.code == 304 or event.code == 305 or event.code == 310 or event.code == 311:
-                        New_Button_values[int(event.code)] = int(event.value)
-                    # print(New_Button_values[int(event.code)])
-
-                elif event.type == ecodes.EV_ABS:
-                    New_Button_values[int(event.code)] = int(event.value)
-                    # print((event.code,event.value))
-                    # print(New_Button_values[D_X], New_Button_values[D_Y])
-                # print ("------------------------------")
-
-                if New_Button_values == Old_Button_values:
-                    # print("Button values unchanged!")
-                    continue
 
                 # Logic flow:
                 # 1. Priortize Joystick input for body movement; Reset movement if joystick released to middle position
@@ -201,55 +215,53 @@ def main():
                         Body_head_switch = 0
                 
                 #Prometheus body movement commands
-                if (New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1) and Agent_flag == 1 and Body_head_switch == 0:
+                if (Joystick_direction == "Center") and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Standing still")
                     client.Move(0.0,0.0,0.0)
 
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 0:
+                elif Joystick_direction == "Up" and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Moving forward")
                     client.Move(x_spd,0.0,0.0)
 
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1 and Body_head_switch == 0:
+                elif Joystick_direction == "Down" and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Moving backward")
                     client.Move(-x_spd,0.0,0.0)
 
-                elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 0:
+                elif Joystick_direction == "Left" and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Turning left")
                     client.Move(0.0,0.0,turn_spd)
 
-                elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 0:
+                elif Joystick_direction == "Right" and Agent_flag == 1 and Body_head_switch == 0:
                     # print("Turning right")
                     client.Move(0.0,0.0,-turn_spd)
                 
                 #Prometheus head movement commands
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
-                    Head_direction = "Center"
+                elif Joystick_direction == "Center" and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking straight ahead")
 
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 0 and Agent_flag == 1 and Body_head_switch == 1:
-                    print("Looking up")
-                    Head_direction = "Up"
+                elif Joystick_direction == "Up" and Agent_flag == 1 and Body_head_switch == 1:
+                    # print("Looking up")
                     pitch -= 0.05
                     pitch =  max(pitch_up, pitch)
                     client.RotateHead(pitch,yaw)
 
-                elif New_Button_values[D_Y] == 1 and New_Button_values[D_X] == 2 and Agent_flag == 1 and Body_head_switch == 1:
+                elif Joystick_direction == "Down" and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking down")
-                    Head_direction = "Down"
+                    # Head_direction = "Down"
                     pitch += 0.05
                     pitch =  max(pitch_up, min(pitch_down, pitch))
                     client.RotateHead(pitch,yaw)
 
-                elif New_Button_values[D_Y] == 0 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
+                elif Joystick_direction == "Left" and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking left")
-                    Head_direction = "Left"
+                    # Head_direction = "Left"
                     yaw += 0.05
                     yaw =  min(yaw,yaw_left)
                     client.RotateHead(pitch,yaw)
 
-                elif New_Button_values[D_Y] == 2 and New_Button_values[D_X] == 1 and Agent_flag == 1 and Body_head_switch == 1:
+                elif Joystick_direction == "Right" and Agent_flag == 1 and Body_head_switch == 1:
                     print("Looking right")
-                    Head_direction = "Right"
+                    # Head_direction = "Right"
                     yaw -= 0.05
                     yaw =  max(yaw_right,yaw)
                     client.RotateHead(pitch,yaw)
